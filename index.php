@@ -8,75 +8,39 @@
     <?php 
     include ("./recursos/templates/bootstrap.php");
     ?>
-    <link rel="stylesheet" href="./recursos/css/general.css">
-    <link rel="stylesheet" href="./recursos/css/index.css">
-    <link rel="icon" href="./recursos/imagenes/Logo.svg" />
+    <link rel="stylesheet" href="../recursos/css/general.css">
+    <link rel="stylesheet" href="../recursos/css/index.css">
+    <link rel="icon" href="./recursos/imagenes/Logo.svg" /><!DOCTYPE html>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--===============================================================================================-->
+        <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="css/util.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <!--===============================================================================================-->
 </head>
-<header>
-    <img src="./recursos/imagenes/LogoColor.svg" alt="logo" class="logo">
-    <form action="#" method="post">
-        <div class="row">
-            <div class="col">
-                <input type="text" class="form-control" placeholder="Usuario">
-            </div>
-            <div class="col">
-                <input type="password" class="form-control" placeholder="Contraseña">
-            </div>
-            <div class="col-auto">
-                <button type="submit" class="btn btn-primary mb-2">Inciar Sesi&oacuten</button>
-            </div>
-        </div>
-    </form>
-</header>
-
 <body>
-    <main>
-        <h1 class="display-4 registro">Registrarse</h1>
-        <form>
-
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Nombre completo</label>
-                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nombre y apellido"
-                    name="nombre">
-            </div>
-
-            <div class="form-group">
-                <label for="exampleFormControlInput1">DNI</label>
-                <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="xxxxxxxx"
-                    name="dni">
-            </div>
-
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Fecha de nacimiento</label>
-                <input type="date" class="form-control" id="exampleFormControlInput1" name="nacimiento">
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Email</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"
-                    name="email">
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Escriba una contraseña</label>
-                <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Contraseña"
-                    name="contrasenia">
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlInput1">Repita la contraseña</label>
-                <input type="password" class="form-control" id="exampleFormControlInput1" placeholder="Contraseña"
-                    name="contrasenia2">
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlSelect1">Elija su rol</label>
-                <select class="form-control" id="exampleFormControlSelect1" name="rol">
-                    <option value="non">--</option>
-                    <option value="chofer">Chofer</option>
-                    <option value="supervisor">Supervisor</option>
-                    <option value="mecanico">Mec&aacutenico</option>
-                    <option value="admin">Administrador</option>
-                </select>
-            </div>
-        </form>
-    </main>
+<?php
+include ("./login.php");
+?>
 </body>
 <footer>
 </footer>
