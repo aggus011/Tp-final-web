@@ -1,48 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Transport Express</title>
-    <?php 
-    include ("./recursos/templates/bootstrap.php");
-    ?>
-    <link rel="stylesheet" href="../recursos/css/general.css">
-    <link rel="stylesheet" href="../recursos/css/index.css">
-    <link rel="icon" href="./recursos/imagenes/Logo.svg" /><!DOCTYPE html>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!--===============================================================================================-->
-        <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
-        <!--===============================================================================================-->
-        <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-        <!--===============================================================================================-->
-        <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-        <!--===============================================================================================-->
-        <link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
-        <!--===============================================================================================-->
-        <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
-        <!--===============================================================================================-->
-        <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-        <!--===============================================================================================-->
-        <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-        <!--===============================================================================================-->
-        <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
-        <!--===============================================================================================-->
-        <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-        <!--===============================================================================================-->
-        <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
-        <!--===============================================================================================-->
-        <link rel="stylesheet" type="text/css" href="css/util.css">
-        <link rel="stylesheet" type="text/css" href="css/main.css">
-        <!--===============================================================================================-->
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body>
-<?php
-include ("./login.php");
-?>
-</body>
+<main>
+    <section class="contenedor-login">
+        <article>
+            <img class="logoBlanco" id="logoBlanco" src="./assets/img/logo/svg/logoBlanco.svg" alt="">
+            <div class="text-login">
+                <h2>Aplication Login Page</h2>
+                <p>Login or register from here to access.</p>
+            </div>
+        </article>
+        <article>
+            <form action="#" method="post" class="formLogin" id="formLogin">
+                <div class="grupo-login">
+                    <input type="text" name="nombre" id="nombre" required>
+                    <label for="nombre">User Name</label>
+                    <span class="input-bar"></span>
+                    <small class="mensajeError" id="msjNombreUsuario"></small>
+                </div>
+                <div class="grupo-login">
+                    <input type="password" name="password" id="password" required>
+                    <label for="password">Password</label>
+                    <span class="input-bar"></span>
+                    <small class="mensajeError" id="msjPassword"></small>
+                </div>
+                <div class="contenedor-submit">
+                    <input type="submit" value="Submit" id="submit" disabled>
+                    <a href="javascript:void(0)" class="linkRegister" id="linkRegister">Register</a>
+                </div>
+            </form>
+        </article>
+    </section>
+</main>
 <footer>
-</footer>
 
+</footer>
+<script src="./assets/js/main.js"></script>
+</body>
 </html>
