@@ -6,14 +6,14 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Transport Express</title>
-    <link rel="stylesheet" href="./recursos/css/normalize.css">
-    <link rel="stylesheet" href="./recursos/css/main.css">
+    <link rel="stylesheet" href="../recursos/css/normalize.css">
+    <link rel="stylesheet" href="../recursos/css/main.css">
 </head>
 <body>
 <main>
     <section class="contenedor-login">
         <article>
-            <img class="logoBlanco" id="logoBlanco" src="./recursos/img/logo/svg/logoBlanco.svg" alt="">
+            <img class="logoBlanco" id="logoBlanco" src="../recursos/img/logo/svg/logoBlanco.svg" alt="">
             <div class="text-login">
                 <h2>Aplication Login Page</h2>
                 <p>Login or register from here to access.</p>
@@ -44,6 +44,6 @@
 <footer>
 
 </footer>
-<script src="./recursos/js/main.js"></script>
+<script src="../recursos/js/main.js"></script>
 </body>
 </html>
