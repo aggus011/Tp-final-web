@@ -59,8 +59,8 @@ section.contenedor-login {
       justify-content: center;
       align-items: center;
       background: #EFF0F4;
-      box-shadow: inset 14px 14px 28px #cbcccf,
-      inset -14px -14px 28px #ffffff;
+      box-shadow: inset 0px 20px 25px #cbcccf,
+      inset 0px -20px 25px #ffffff;
 
 
       .formLogin {
@@ -272,10 +272,15 @@ section.contenedor-login {
           }
 
           p {
-            font-size: 2vw;
+            font-size: 2.2vw;
           }
 
         }
+      }
+
+      &:nth-child(2) {
+        box-shadow: inset 20px 0px 25px #cbcccf,
+        inset -20px 0px 25px #ffffff;
       }
     }
   }

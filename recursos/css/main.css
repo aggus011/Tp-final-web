@@ -36,7 +36,7 @@ section.contenedor-login article {
     justify-content: center;
     align-items: center;
     background: #EFF0F4;
-    box-shadow: inset 14px 14px 28px #cbcccf, inset -14px -14px 28px #ffffff; }
+    box-shadow: inset 0px 20px 25px #cbcccf, inset 0px -20px 25px #ffffff; }
     section.contenedor-login article:nth-child(2) .formLogin {
       display: flex;
       flex-flow: column;
@@ -182,6 +182,8 @@ section.contenedor-login article {
       section.contenedor-login article:nth-child(1) .text-login h2 {
         font-size: 3vw; }
       section.contenedor-login article:nth-child(1) .text-login p {
-        font-size: 2vw; } }
+        font-size: 2.2vw; }
+      section.contenedor-login article:nth-child(2) {
+        box-shadow: inset 20px 0px 25px #cbcccf, inset -20px 0px 25px #ffffff; } }
 
 /*# sourceMappingURL=main.css.map */
