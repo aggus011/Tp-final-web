@@ -21,9 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5b30e037-85d7-4d6a-9d7f-267880532341" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recursos/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/recursos/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recursos/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/recursos/css/main.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recursos/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/recursos/scss/main.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +41,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../simpsons-nunez-daniel" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -97,10 +95,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="cambie los directorios" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="564" y="146" key="FileChooserDialogImpl" timestamp="1604450015099">
+    <state x="564" y="146" key="FileChooserDialogImpl" timestamp="1604531641221">
       <screen x="0" y="0" width="1676" height="902" />
     </state>
-    <state x="564" y="146" key="FileChooserDialogImpl/0.0.1676.902@0.0.1676.902" timestamp="1604450015099" />
+    <state x="564" y="146" key="FileChooserDialogImpl/0.0.1676.902@0.0.1676.902" timestamp="1604531641221" />
     <state x="787" y="243" key="NewPhpClassDialog" timestamp="1604324658830">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
