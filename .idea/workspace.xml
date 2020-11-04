@@ -21,6 +21,10 @@
   <component name="ChangeListManager">
     <list default="true" id="5b30e037-85d7-4d6a-9d7f-267880532341" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recursos/.sass-cache/c90499fab14de842950e6ae8f92ad686e1660c9b/main.scssc" beforeDir="false" afterPath="$PROJECT_DIR$/recursos/.sass-cache/c90499fab14de842950e6ae8f92ad686e1660c9b/main.scssc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recursos/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/recursos/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recursos/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/recursos/css/main.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recursos/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/recursos/scss/main.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

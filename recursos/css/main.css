@@ -180,9 +180,10 @@ section.contenedor-login article {
       height: 100vh;
       width: 50%; }
       section.contenedor-login article:nth-child(1) .text-login h2 {
-        font-size: 3vw; }
+        font-size: 2em; }
       section.contenedor-login article:nth-child(1) .text-login p {
-        font-size: 2.2vw; }
+        font-size: 1em;
+        margin-bottom: 0; }
       section.contenedor-login article:nth-child(2) {
         box-shadow: inset 20px 0px 25px #cbcccf, inset -20px 0px 25px #ffffff; } }
 
