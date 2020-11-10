@@ -1,4 +1,4 @@
-DROP SCHEMA `grupo02`;
+drop database grupo02;
 CREATE SCHEMA IF NOT EXISTS `grupo02` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `grupo02` ;
 
