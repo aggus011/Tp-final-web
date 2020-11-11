@@ -54,11 +54,11 @@ CREATE TABLE IF NOT EXISTS `grupo02`.`Usuario` (
   `documento` VARCHAR(25) NULL,
   `telefono` VARCHAR(25) NULL,
   `email` VARCHAR(60) NULL,
-  `nombreUsuario` VARCHAR(60) NULL,
+  `nombreUsuario` VARCHAR(60) NOT NULL UNIQUE,
   `password` VARCHAR(255) NULL,
   `estado` TINYINT(1) UNSIGNED NULL DEFAULT 0,
-  `fk_Usuario_Role` TINYINT UNSIGNED NOT NULL,
-  `fk_Usuario_Direccion` INT NOT NULL,
+  `fk_Usuario_Role` TINYINT UNSIGNED NULL,
+  `fk_Usuario_Direccion` INT NULL,
   PRIMARY KEY (`idUsuario`),
   CONSTRAINT `fk_Usuario_Role`
     FOREIGN KEY (`fk_Usuario_Role`)
@@ -182,3 +182,8 @@ CREATE TABLE IF NOT EXISTS `grupo02`.`Viaje` (
     FOREIGN KEY (`fk_Viaje_Direccion`)
     REFERENCES `grupo02`.`Direccion` (`idDireccion`))
 ENGINE = InnoDB;
+INSERT INTO `grupo02`.`Role` (`nombre`)
+  VALUES ('chofer'),
+         ('admin'),
+         ('supervisor'),
+         ('encargadoTaller');

@@ -14,5 +14,10 @@ class RegisterController
         $data["usuario"] = $this->registerModel->getUsuarios();
         echo $this->render->render("view/registerView.php", $data);
     }
+    public function addUser(){
+        $this->registerModel->addUser();
+        echo $this->render->render( "view/registerView.php");
+    }
+
 }
 ?>

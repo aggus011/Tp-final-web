@@ -1,7 +1,7 @@
 {{> header}}
 <section class="contenedor-login">
         <article>
-            <img class="logoBlanco" id="logoBlanco" src="/Tp-final-web/public/img/logoBlanco.svg"
+            <img class="logoBlanco" id="logoBlanco" src="../public/img/logoBlanco.svg"
                  alt="">
             <div class="text-login">
                 <h2>Aplication Login Page</h2>
@@ -9,7 +9,7 @@
             </div>
         </article>
         <article>
-        <form action='#' method='post' id="formRegister">
+        <form action='/Register/addUser' method='post' id="formRegister">
                 <div class="grupo-login">
                     <input type="text" name="nombreRegister" id="nombreRegister" autocomplete='off' required>
                     <label for="nombreRegister">Nombre</label>

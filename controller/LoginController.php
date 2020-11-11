@@ -16,8 +16,18 @@ class LoginController
     }
 
     public function insertUsuario(){
-        $this->loginModel->insertUsuario();
+        $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : "";
+        $password = isset($_POST['password']) ? $_POST['password'] : "";
+        if($nombre == "" OR $password == "")
+            return $this->renderErrorMenssage('El email y password son obligatorios');
+        else()
+        $this->loginModel->insertUsuario($nombre);
         echo $this->render->render( "view/loginView.php");
+    }
+
+    public function renderErrorMenssage($message){
+        $params = array('errorMessage' => $message);
+        echo $this->render->render("view/loginView.php", $params);
     }
 }
 ?>

@@ -10,7 +10,9 @@ class LoginModel{
         return $this->database->query("SELECT * FROM `role`");
     }
 
-    public function insertUsuario(){
-        return $this->database->queryInsert("INSERT INTO `role` (`nombre`) VALUES ('Chofer')");
-    }
+    public function insertUsuario($nombre){
+        $nombre = $this->db->real_escape_string($email);
+        $sql = "SELECT * FROM usuario WHERE nombre='$nombre'";
+        /* return $this->database->queryInsert("INSERT INTO `role` (`nombre`) VALUES ('Chofer')"); */
+    } 
 }
