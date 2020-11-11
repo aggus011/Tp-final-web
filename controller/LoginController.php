@@ -18,10 +18,12 @@ class LoginController
     public function insertUsuario(){
         $nombre = isset($_POST['nombre']) ? $_POST['nombre'] : "";
         $password = isset($_POST['password']) ? $_POST['password'] : "";
-        if($nombre == "" OR $password == "")
+        if($nombre == "" || $password == "")
             return $this->renderErrorMenssage('El email y password son obligatorios');
-        else()
-        $this->loginModel->insertUsuario($nombre);
+        else{
+            $this->loginModel->insertUsuario($nombre, $password);
+            echo $nombre;
+        }
         echo $this->render->render( "view/loginView.php");
     }
 
