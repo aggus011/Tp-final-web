@@ -63,7 +63,7 @@
     </section>
     <section class="contenedor-login">
         <article>
-            <img class="logoBlanco" id="logoBlanco" src="../public/img/logoBlanco.svg"
+            <img class="logoBlanco" id="logoBlanco" src="/Tp-final-web/public/img/logoBlanco.svg"
                  alt="">
             <div class="text-login">
                 <h2>Aplication Login Page</h2>

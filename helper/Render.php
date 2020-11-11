@@ -1,6 +1,6 @@
 <?php
 
-class Renderer{
+class Render{
 
     private $mustache;
 

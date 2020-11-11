@@ -1,14 +1,14 @@
 <?php
 
-include_once("helper/Database.php");
-include_once("helper/Renderer.php");
+include_once("helper/MysqlDatabase.php");
+include_once("helper/Render.php");
 include_once("helper/UrlHelper.php");
 
 include_once("model/loginModel.php");
 
 include_once("controller/LoginController.php");
 
-include_once('vendor/mustache/src/Mustache/Autoloader.php');
+include_once('vendor/mustache/mustache/src/Mustache/Autoloader.php');
 include_once("Router.php");
 
 class Configuration{
@@ -19,7 +19,7 @@ class Configuration{
 
     private function getDatabase(){
         $config = $this->getConfig();
-        return new Database(
+        return new MysqlDatabase(
             $config["servername"],
             $config["username"],
             $config["password"],
@@ -45,6 +45,6 @@ class Configuration{
     
     public function getLoginController(){
         $loginModel = $this->getLoginModel();
-        return new LoginController($loginModel, $this->getRender);
+        return new LoginController($loginModel, $this->getRender());
     }
 }

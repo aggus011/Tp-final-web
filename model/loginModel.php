@@ -1,12 +1,12 @@
-<?php
-class LoginModel{​​​​​
+ <?php 
+class LoginModel{
     private $database;
 
-    public function __construct($database){​​​​​
+    public function __construct($database){
         $this->database = $database;
-    }​​​​​
+    }
 
-    public function getUsuarios(){​​​​​
-        return $this->database->query("SELECT * FROM usuarios");
-    }​​​​​
-}​​​​​
+    public function getUsuarios(){
+        return $this->database->query("SELECT * FROM usuario");
+    }
+}
