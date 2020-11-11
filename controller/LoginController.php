@@ -11,8 +11,13 @@ class LoginController
 
     public function execute(){
         
-        $data["usuario"] = $this->loginModel->getUsuarios();
+        $data["usuarios"] = $this->loginModel->getUsuarios();
         echo $this->render->render("view/loginView.php", $data);
+    }
+
+    public function insertUsuario(){
+        $this->loginModel->insertUsuario();
+        echo $this->render->render( "view/loginView.php");
     }
 }
 ?>

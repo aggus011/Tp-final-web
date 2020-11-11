@@ -5,17 +5,16 @@ include_once("helper/Render.php");
 include_once("helper/UrlHelper.php");
 
 include_once("model/loginModel.php");
+include_once("model/registerModel.php");
 
 include_once("controller/LoginController.php");
+include_once("controller/RegisterController.php");
 
 include_once('vendor/mustache/mustache/src/Mustache/Autoloader.php');
 include_once("Router.php");
 
 class Configuration{
-    public function getLoginModel(){
-        $database = $this->getDatabase();
-        return new LoginModel($database);
-    }
+   
 
     private function getDatabase(){
         $config = $this->getConfig();
@@ -46,5 +45,20 @@ class Configuration{
     public function getLoginController(){
         $loginModel = $this->getLoginModel();
         return new LoginController($loginModel, $this->getRender());
+    }
+
+    public function getLoginModel(){
+        $database = $this->getDatabase();
+        return new LoginModel($database);
+    }
+
+    public function getRegisterController(){
+        $RegisterModel = $this->getRegisterModel();
+        return new RegisterController($RegisterModel, $this->getRender());
+    }
+    
+    public function getRegisterModel(){
+        $database = $this->getDatabase();
+        return new RegisterModel($database);
     }
 }

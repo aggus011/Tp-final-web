@@ -7,6 +7,10 @@ class LoginModel{
     }
 
     public function getUsuarios(){
-        return $this->database->query("SELECT * FROM usuario");
+        return $this->database->query("SELECT * FROM `role`");
+    }
+
+    public function insertUsuario(){
+        return $this->database->queryInsert("INSERT INTO `role` (`nombre`) VALUES ('Chofer')");
     }
 }
