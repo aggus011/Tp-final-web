@@ -3,7 +3,7 @@
     
     <section class="contenedor-login">
         <article class="bienvenida">
-            <div class="logo"><img class="logoBlanco" id="logoBlanco" src="../public/img/logoBlanco.svg" alt="Logo">
+            <div class="logo"><img class="logoBlanco" id="logoBlanco" src="../public/img/logoBlanco.png" alt="Logo">
 
             </div>
             <div class="titulo"><p>Ingrese o registrese para continuar.</p></div>

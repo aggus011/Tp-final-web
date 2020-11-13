@@ -1,13 +1,18 @@
 {{> header}}
 <section class="contenedor-login">
-        <article>
-            <img class="logoBlanco" id="logoBlanco" src="../public/img/logoBlanco.svg"
-                 alt="">
-            <div class="text-login">
-                <h2>Aplication Login Page</h2>
-                <p>Login or register from here to access.</p>
-            </div>
-        </article>
+    <article class="bienvenida">
+        <div class="logo"><img class="logoBlanco" id="logoBlanco" src="../public/img/logoBlanco.png" alt="Logo">
+
+        </div>
+        <div class="titulo"><p>Ingrese sus datos para registrarse.</p></div>
+
+        <!--            <div class="">-->
+        <!--                {{#usuarios}}-->
+        <!--                <h2>{{nombre}}</h2>-->
+        <!--                <p>Login or register from here to access.</p>-->
+        <!--                {{/usuarios}}-->
+        <!--            </div>-->
+    </article>
         <article>
         <form action='/Register/addUser' method='post' id="formRegister">
                 <div class="grupo-login">
