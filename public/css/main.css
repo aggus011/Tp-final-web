@@ -2,6 +2,44 @@
 html, body {
   font-family: 'Roboto', sans-serif; }
 
+/*animacion css*/
+.bienvenida{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.titulo{
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+  animation-name: animacionDesvanecer;
+  animation-duration: 2.5s;
+}
+#logoBlanco{
+ animation-name:animacionBajando ;
+  animation-duration: 2s;
+}
+/*modificando partes del logo y titulo*/
+/*animacion css*/
+@keyframes animacionBajando{
+  0%{
+    margin-top: -100vw;
+  }
+  100%{
+    margin-top: 0;
+  }
+}
+@keyframes animacionDesvanecer{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+/*fin de animacion*/
 section.contenedor-login article {
   height: 100vh;
   width: 100%; }

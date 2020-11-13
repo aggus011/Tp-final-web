@@ -2,15 +2,18 @@
 <main>
     
     <section class="contenedor-login">
-        <article>
-            <img class="logoBlanco" id="logoBlanco" src="../public/img/logoBlanco.svg"
-                 alt="">
-            <div class="">
-                {{#usuarios}}
-                <h2>{{nombre}}</h2>
-                <p>Login or register from here to access.</p>
-                {{/usuarios}}
+        <article class="bienvenida">
+            <div class="logo"><img class="logoBlanco" id="logoBlanco" src="../public/img/logoBlanco.svg" alt="Logo">
+
             </div>
+            <div class="titulo"><p>Ingrese o registrese para continuar.</p></div>
+
+<!--            <div class="">-->
+<!--                {{#usuarios}}-->
+<!--                <h2>{{nombre}}</h2>-->
+<!--                <p>Login or register from here to access.</p>-->
+<!--                {{/usuarios}}-->
+<!--            </div>-->
         </article>
         <article>
             <form action="/login/insertUsuario" method="post" class="formLogin" id="formLogin">

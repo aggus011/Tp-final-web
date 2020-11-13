@@ -18,12 +18,12 @@ class MysqlDatabase{
     }
 
     public function query($sql){
-        $result = mysqli_query($this->connection, $sql);
+        $result = mysqli_query($this->connection, $sql) or die ("Problemas en: ".mysqli_error($this->connection));
         return mysqli_fetch_all($result,MYSQLI_ASSOC);
     }
 
     public function queryInsert($sql){
-        $result = mysqli_query($this->connection, $sql);
+        $result = mysqli_query($this->connection, $sql) or die ("Problemas en: ".mysqli_error($this->connection));
     }
 
     public function execute($sql){
