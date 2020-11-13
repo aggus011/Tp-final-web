@@ -29,7 +29,10 @@
                     <span class="input-bar"></span>
                     <small class="mensajeError" id="msjPassword"></small>
                 </div>
+                <p style="color: #f00">{{mensajeError}}</p>
+<!--                //esto ni idea q hace pero lo dejo xD-->
                 <?php !empty($errorMessage) ? print($errorMessage) : ''; ?>
+<!--                fin-->
                 <div class="contenedor-submit">
                     <input type="submit" value="Submit" id="inputLogin" class="input-submit">
                     <a href="/register" class="linkRegister" id="linkRegister">Register</a>
