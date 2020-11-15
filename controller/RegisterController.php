@@ -23,7 +23,7 @@ class RegisterController
         $password = isset($_POST['passwordRegister']) ? $_POST['passwordRegister'] : "";
         $telefono = isset($_POST['telefonoRegister']) ? $_POST['telefonoRegister'] : "";
         $this->registerModel->addUser($nombre,$apellido,$documento,$telefono,$email,$username,$password);
-        echo $this->render->render( "view/registerView.php");
+        echo $this->render->render( "view/loginView.php");
     }
 
 }

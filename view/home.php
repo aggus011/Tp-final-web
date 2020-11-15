@@ -1,5 +1,5 @@
 {{> header}}
 <section class="contenedor-login">
-    <h1>Bienvenido {{nombreLogeado}}</h1>
+    <h1> {{nombreRol}} </h1>
 </section>
 {{> footer}}
