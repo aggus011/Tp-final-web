@@ -1,4 +1,4 @@
-drop database grupo02;
+
 CREATE SCHEMA IF NOT EXISTS `grupo02` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `grupo02` ;
 
@@ -182,8 +182,12 @@ CREATE TABLE IF NOT EXISTS `grupo02`.`Viaje` (
     FOREIGN KEY (`fk_Viaje_Direccion`)
     REFERENCES `grupo02`.`Direccion` (`idDireccion`))
 ENGINE = InnoDB;
+
 INSERT INTO `grupo02`.`Role` (`nombre`)
   VALUES ('chofer'),
          ('admin'),
          ('supervisor'),
-         ('encargadoTaller');
+         ('encargadoTaller'),
+         ('sin rol');
+         
+

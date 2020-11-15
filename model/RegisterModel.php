@@ -15,8 +15,8 @@ class RegisterModel{
     
        if($nombre != "" && $apellido != "" && $documento != "" && $username != "" && $email != "" && $password != "" && $telefono != ""){
               $this->database->queryInsert("INSERT INTO `usuario` 
-              (`nombre`, `apellido`, `documento`, `telefono`, `email`, `nombreUsuario`, `password`, `fk_Usuario_role`,`fk_Usuario_Direccion`)
-             VALUES ('$nombre', '$apellido', '$documento', '$telefono', '$email', '$username', '$password','1', '1')");
+              (`nombre`, `apellido`, `documento`, `telefono`, `email`, `nombreUsuario`, `password`, `fk_Usuario_role`)
+             VALUES ('$nombre', '$apellido', '$documento', '$telefono', '$email', '$username', '$password',(SELECT idRole FROM `role` WHERE nombre = 'sin rol'))");
     }
 }
 }

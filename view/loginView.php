@@ -31,8 +31,8 @@
                 </div>
                 <?php !empty($errorMessage) ? print($errorMessage) : ''; ?>
                 <div class="contenedor-submit">
-                    <input type="submit" value="Submit" id="inputLogin" class="input-submit">
-                    <a href="/register" class="linkRegister" id="linkRegister">Register</a>
+                    <input type="submit" value="Iniciar Sesión" id="inputLogin" class="input-submit">
+                    <a href="/register" class="linkRegister" id="linkRegister">Registrarse</a>
                 </div>
             </form>
         </article>

@@ -23,7 +23,7 @@
                     <small class="mensajeError" id="msjApellidoRegister"></small>
                 </div>
                 <div class="grupo-login">
-                    <input type="text" name="documentoRegister" id="documentoRegister" required>
+                    <input type="number" name="documentoRegister" id="documentoRegister" required>
                     <label for="documentoRegister">Numero de documento</label>
                     <span class="input-bar"></span>
                     <small class="mensajeError" id="msjDocumentoRegister"></small>
@@ -35,7 +35,7 @@
                 <!--                    <small class="mensajeError" id="msjFechaNacimiento"></small>-->
                 <!--                </div>-->
                 <div class="grupo-login">
-                    <input type="text" name="telefonoRegister" id="telefonoRegister" required>
+                    <input type="number" name="telefonoRegister" id="telefonoRegister" required>
                     <label for="telefonoRegister">Telefono de contacto</label>
                     <span class="input-bar"></span>
                     <small class="mensajeError" id="msjTelefonoRegister"></small>
@@ -53,13 +53,14 @@
                     <small class="mensajeError" id="msjEmailRegister"></small>
                 </div>
                 <div class="grupo-login">
-                    <input type="text" name="passwordRegister" id="passwordRegister" required>
+                    <input type="password" name="passwordRegister" id="passwordRegister" required>
                     <label for='passwordRegister'>Contraseña</label>
                     <span class="input-bar"></span>
                     <small class="mensajeError" id="msjPasswordRegister"></small>
-                </div>
+                
                 <div class='contenedor-submit'>
-                    <input type='submit' class="input-submit" id="inputRegister" value='Enviar' >
+                    <input type='submit' class="input-submit" id="inputRegister" value='Registrarse' >
+                    <a href="/login" class="linkRegister" id="linkRegister">Volver</a>
                 </div>
             </form>
         </article>
