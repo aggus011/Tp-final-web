@@ -21,10 +21,15 @@ class LoginController
         if($nombre == "" || $password == "")
             return $this->renderErrorMenssage('El email y password son obligatorios');
         else{
-            $this->loginModel->insertUsuario($nombre, $password);
-            echo $nombre;
+                if($this->loginModel->validarUsuarioUnico($nombre, $password)){
+                    $data["nombreLogeado"] =$nombre;
+                    echo $this->render->render( "view/home.php",$data);
+                }else{
+                    $data["mensajeError"]="Usuario y/o contaseña invalida";
+                    echo $this->render->render( "view/loginView.php",$data);
+                }
         }
-        echo $this->render->render( "view/loginView.php");
+
     }
 
     public function renderErrorMenssage($message){

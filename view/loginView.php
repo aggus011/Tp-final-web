@@ -3,7 +3,7 @@
     
     <section class="contenedor-login">
         <article class="bienvenida">
-            <div class="logo"><img class="logoBlanco" id="logoBlanco" src="../public/img/logoBlanco.svg" alt="Logo">
+            <div class="logo"><img class="logoBlanco" id="logoBlanco" src="../public/img/logoBlanco.png" alt="Logo">
 
             </div>
             <div class="titulo"><p>Ingrese o registrese para continuar.</p></div>
@@ -29,7 +29,10 @@
                     <span class="input-bar"></span>
                     <small class="mensajeError" id="msjPassword"></small>
                 </div>
+                <p style="color: #f00">{{mensajeError}}</p>
+<!--                //esto ni idea q hace pero lo dejo xD-->
                 <?php !empty($errorMessage) ? print($errorMessage) : ''; ?>
+<!--                fin-->
                 <div class="contenedor-submit">
                     <input type="submit" value="Iniciar Sesión" id="inputLogin" class="input-submit">
                     <a href="/register" class="linkRegister" id="linkRegister">Registrarse</a>
