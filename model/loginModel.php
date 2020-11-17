@@ -10,13 +10,16 @@ class LoginModel{
         return $this->database->query("SELECT * FROM `role`");
     }
 
-    public function validarUsuarioUnico($nombre, $password){
-        $queryResult = $this->database->query("SELECT nombreUsuario, password FROM `usuario` 
+    public function traerUsuarioLogeado($nombre, $password){
+        $queryResult = $this->database->query("SELECT * FROM `usuario` 
         WHERE nombreUsuario = '". $nombre ."' and password='".$password."'");
         if (sizeof($queryResult) == 1){
-            return true;
+            return $queryResult;
         }else{
             return false;
         }
-    } 
+    }
+    public function traerRolPorNumeroFk($numero){
+        return $this->database->query("SELECT * FROM grupo02.role where idRole=$numero");
+    }
 }
