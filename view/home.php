@@ -1,5 +1,4 @@
 {{> header}}
-<<<<<<< HEAD
 <!-- <section class="contenedor-login">
     <h1>Bienvenido {{nombreLogeado}}</h1>
 </section> -->
@@ -100,9 +99,4 @@
         </nav>
   </body>
     </html>
-=======
-<section class="contenedor-login">
-    <h1> {{nombreRol}} </h1>
-</section>
->>>>>>> intento-home
 {{> footer}}
