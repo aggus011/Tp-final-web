@@ -1,12 +1,8 @@
 {{> header}}
-<!-- <section class="contenedor-login">
-    <h1>Bienvenido {{nombreLogeado}}</h1>
-</section> -->
-<html>
-  <head>
- 
-  </head>
-  <body><div class="area"></div><nav class="main-menu">
+<section class="contenedor-login">
+    <h1>____ {{nombreRol}}</h1>
+</section>
+  <div class="area"></div><nav class="main-menu">
             <ul>
                 <li>
                     <a href="http://justinfarrow.com">
@@ -97,6 +93,4 @@
                 </li>  
             </ul>
         </nav>
-  </body>
-    </html>
 {{> footer}}

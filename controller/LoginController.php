@@ -25,27 +25,35 @@ class LoginController
                 if($usuario){
                     $rol= $this->loginModel->traerRolPorNumeroFk($usuario[0]['fk_Usuario_Role']);
                     // aca estaria la separacion por rol una vez logeado pregunta el rol y lo dirige al .php de ese rol
-                    // habria q validar q este logeado para seguridad pero esos son detalles
-                    // el echo render de la linea 47 se eliminaria y pondria en casa case del switch con su
-                    // correspondiente rol
-                    switch ($rol[0]["nombre"]){
-                        case "admin":
-                            $data["nombreRol"]="el usuario ingresado es admin";
-                            break;
-                        case "supervisor":
-                            $data["nombreRol"]="el usuario ingresado es supervisor";
-                            break;
-                        case "encargadoTaller":
-                            $data["nombreRol"]="el usuario ingresado es encargado de taller";
-                            break;
-                        case "chofer":
-                            $data["nombreRol"]="el usuario ingresado es chofer";
-                            break;
-                        default:
-                            $data["nombreRol"]="el usuario ingresado es sin rol";
-                            break;
-                    }
-                    echo $this->render->render( "view/home.php",$data);
+                   if (isset($rol[0]["nombre"])) {
+                       switch ($rol[0]["nombre"]) {
+                           case "admin":
+                               $data["nombreRol"] = "el usuario ingresado es admin";
+                               //cambiar home por admin.php
+                               echo $this->render->render("view/home.php", $data);
+                               break;
+                           case "supervisor":
+                               $data["nombreRol"] = "el usuario ingresado es supervisor";
+                               //cambiar home por supervisor.php
+                               echo $this->render->render("view/home.php", $data);
+                               break;
+                           case "encargadoTaller":
+                               $data["nombreRol"] = "el usuario ingresado es encargado de taller";
+                               echo $this->render->render("view/home.php", $data);
+                               break;
+                           case "chofer":
+                               $data["nombreRol"] = "el usuario ingresado es chofer";
+                               echo $this->render->render("view/home.php", $data);
+                               break;
+                           default:
+                               $data["nombreRol"] = "el usuario ingresado es sin rol";
+                               echo $this->render->render("view/home.php", $data);
+                               break;
+                       }
+                   }else{
+                       $data["nombreRol"] = "el usuario ingresado es sin rol";
+                       echo $this->render->render("view/home.php", $data);
+                   }
                 }else{
                     $data["mensajeError"]="Usuario y/o contaseña invalida";
                     echo $this->render->render( "view/loginView.php",$data);

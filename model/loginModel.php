@@ -20,6 +20,6 @@ class LoginModel{
         }
     }
     public function traerRolPorNumeroFk($numero){
-        return $this->database->query("SELECT * FROM grupo02.role where idRole=$numero");
+        return $this->database->query("SELECT * FROM grupo02.role where idRole='$numero'");
     }
 }
