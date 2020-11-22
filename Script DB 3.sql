@@ -190,4 +190,20 @@ INSERT INTO `grupo02`.`Role` (`nombre`)
          ('encargadoTaller'),
          ('sin rol');
          
+INSERT INTO `grupo02`.`direccion`
+(`idDireccion`,
+`calle`,
+`numero`,
+`localidad`,
+`provincia`,
+`pais`)
+VALUES
+(0,
+'SIN DIRECCION',
+'SIN DIRECCION',
+'SIN DIRECCION',
+'SIN DIRECCION',
+'SIN DIRECCION');
+
+
 

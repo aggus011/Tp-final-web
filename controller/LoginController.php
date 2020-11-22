@@ -30,29 +30,29 @@ class LoginController
                            case "admin":
                                $data["nombreRol"] = "el usuario ingresado es admin";
                                //cambiar home por admin.php
-                               echo $this->render->render("view/home.php", $data);
+                               echo $this->render->render("view/homeAdminView.php", $data);
                                break;
                            case "supervisor":
                                $data["nombreRol"] = "el usuario ingresado es supervisor";
                                //cambiar home por supervisor.php
-                               echo $this->render->render("view/home.php", $data);
+                               echo $this->render->render("view/homeView.php", $data);
                                break;
                            case "encargadoTaller":
                                $data["nombreRol"] = "el usuario ingresado es encargado de taller";
-                               echo $this->render->render("view/home.php", $data);
+                               echo $this->render->render("view/homeView.php", $data);
                                break;
                            case "chofer":
                                $data["nombreRol"] = "el usuario ingresado es chofer";
-                               echo $this->render->render("view/home.php", $data);
+                               echo $this->render->render("view/homeView.php", $data);
                                break;
                            default:
                                $data["nombreRol"] = "el usuario ingresado es sin rol";
-                               echo $this->render->render("view/home.php", $data);
+                               echo $this->render->render("view/homeView.php", $data);
                                break;
                        }
                    }else{
                        $data["nombreRol"] = "el usuario ingresado es sin rol";
-                       echo $this->render->render("view/home.php", $data);
+                       echo $this->render->render("view/homeView.php", $data);
                    }
                 }else{
                     $data["mensajeError"]="Usuario y/o contaseña invalida";

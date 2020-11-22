@@ -14,9 +14,15 @@ class RegisterModel{
 
     
        if($nombre != "" && $apellido != "" && $documento != "" && $username != "" && $email != "" && $password != "" && $telefono != ""){
-              $this->database->queryInsert("INSERT INTO `usuario` 
-              (`nombre`, `apellido`, `documento`, `telefono`, `email`, `nombreUsuario`, `password`, `fk_Usuario_role`)
-             VALUES ('$nombre', '$apellido', '$documento', '$telefono', '$email', '$username', '$password',(SELECT idRole FROM `role` WHERE nombre = 'sin rol'))");
-    }
+           /*Arreglar esto para que no se repita el nombre de usuario*/
+        $user = $this->database->buscaUserName("SELECT COUNT(*) FROM `usuario` WHERE nombreUsuario = $username");  
+        if($user == 0){
+              $this->database->queryInsert("INSERT INTO `usuario` (`nombre`, `apellido`, `documento`, `telefono`, `email`, `nombreUsuario`, `password`, `fk_Usuario_role`, `fk_Usuario_Direccion`)
+             VALUES ('$nombre', '$apellido', '$documento', '$telefono', '$email', '$username', '$password',(SELECT idRole FROM `role` WHERE nombre = 'sin rol'),(SELECT idDireccion FROM `Direccion` where calle like ('SIN DIRECCION')))");
+        }else{
+           echo "El user name ya esta usado"; 
+        }
 }
 }
+}
+

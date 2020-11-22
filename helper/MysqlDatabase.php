@@ -26,6 +26,11 @@ class MysqlDatabase{
         $result = mysqli_query($this->connection, $sql) or die ("Problemas en quertInsert: ".mysqli_error($this->connection));
     }
 
+    public function buscaUserName($sql){
+        $result = mysqli_query($this->connection, $sql) or die ("Problemas en quertInsert: ".mysqli_error($this->connection));
+        return mysqli_fetch_all($result,MYSQLI_ASSOC);
+    }
+
     public function execute($sql){
         mysqli_query($this->connection, $sql);
     }

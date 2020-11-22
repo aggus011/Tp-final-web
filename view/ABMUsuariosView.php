@@ -1,23 +1,23 @@
 {{> header}}
-<section class="contenedor-login">
-    <h1>____ {{nombreRol}}</h1>
+<section class="contenedor-login" style="margin-left: 70px">
+    <h1>Usuarios</h1>
 </section>
   <div class="area"></div><nav class="main-menu">
             <ul>
                 <li>
-                    <a href="http://justinfarrow.com">
+                    <a href="/homeAdmin">
                         <i class="fa fa-home fa-2x"></i>
                         <span class="nav-text">
-                            Dashboard
+                            Inicio
                         </span>
                     </a>
                   
                 </li>
                 <li class="has-subnav">
-                    <a href="#">
-                        <i class="fa fa-laptop fa-2x"></i>
+                    <a href="/ABMUsuarios">
+                        <i class="fa fa-users fa-2x"></i>
                         <span class="nav-text">
-                            Stars Components
+                            Usuarios
                         </span>
                     </a>
                     
