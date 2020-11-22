@@ -6,9 +6,11 @@ include_once("helper/UrlHelper.php");
 
 include_once("model/loginModel.php");
 include_once("model/registerModel.php");
+include_once("model/homeModel.php");
 
 include_once("controller/LoginController.php");
 include_once("controller/RegisterController.php");
+include_once("controller/HomeController.php");
 
 include_once('vendor/mustache/mustache/src/Mustache/Autoloader.php');
 include_once("Router.php");
@@ -60,5 +62,15 @@ class Configuration{
     public function getRegisterModel(){
         $database = $this->getDatabase();
         return new RegisterModel($database);
+    }
+
+    public function getHomeController(){
+        $HomeModel = $this->getHomeModel();
+        return new RegisterController($HomeModel, $this->getRender());
+    }
+    
+    public function getHomeModel(){
+        $database = $this->getDatabase();
+        return new homeModel($database);
     }
 }
