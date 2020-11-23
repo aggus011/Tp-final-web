@@ -93,4 +93,27 @@
                 </li>  
             </ul>
         </nav>
+        <nav class="alta">
+        <h1>Dar de alta a un usuario</h1>
+            <form action="/homeAdmin/darAlta" method="post">
+            <div>
+                <label for="nombreUsuario">Nombre de Usuario </label>
+                <input type="text" name="nombreUsuario" id="nombreUsuario">
+            </div>
+            <br>
+            <button>Dar de alta</button>
+            </form>
+        </nav>
+        
+        <nav class="alta">
+        <h1>Dar de baja a un usuario</h1>
+            <form action="/homeAdmin/darBaja" method="post">
+            <div>
+                <label for="nombreUsuario">Nombre de Usuario </label>
+                <input type="text" name="nombreUsuario" id="nombreUsuario">
+            </div>
+            <br>
+            <button>Dar de baja</button>
+            </form>
+        </nav>
 {{> footer}}
