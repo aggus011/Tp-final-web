@@ -22,7 +22,10 @@
     <list default="true" id="5b30e037-85d7-4d6a-9d7f-267880532341" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/RegisterModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/RegisterModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ABMUsuariosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ABMUsuariosController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/ABMUsuariosModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/ABMUsuariosModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/ABMUsuariosView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/ABMUsuariosView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/partial/header.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/view/partial/header.mustache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +100,7 @@
       <workItem from="1605414782417" duration="594000" />
       <workItem from="1605450957107" duration="5067000" />
       <workItem from="1606090893200" duration="1546000" />
+      <workItem from="1606139198705" duration="11078000" />
     </task>
     <task id="LOCAL-00001" summary="cambie los directorios">
       <created>1604443927197</created>
@@ -154,6 +158,10 @@
       <screen x="0" y="0" width="1676" height="902" />
     </state>
     <state x="229" y="9" key="SettingsEditor/0.0.1676.902@0.0.1676.902" timestamp="1604544056803" />
+    <state x="285" y="252" width="1486" height="660" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1606155976238">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="285" y="252" width="1486" height="660" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606155976238" />
     <state x="483" y="118" width="708" height="664" key="find.popup" timestamp="1604617298162">
       <screen x="0" y="0" width="1676" height="902" />
     </state>
