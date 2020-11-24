@@ -3,7 +3,7 @@
 <section class="contenedor-login" style="margin-left: 70px">
 <section>
   <!--for demo wrap-->
-  <h1>Fixed Table header</h1>
+  <h1>Registro de Usuarios</h1>
   <div class="tbl-header">
     <table cellpadding="0" cellspacing="0" border="0">
       <thead>
@@ -15,6 +15,7 @@
           <th>rol</th>
           <th>estado</th>
           <th>editar</th>
+          <th>eliminar</th>
         </tr>
       </thead>
     </table>
@@ -28,11 +29,11 @@
           <td>{{apellido}} </td>
           <td>{{documento}}</td>
           <td>{{nombreUsuario}}</td>
-          <td>{{fk_Usuario_Role}}</td>
+          <td>{{role}}</td>
           <td>{{estado}}</td>
             <td>
                 <button type='button' class='btn btn-info m-2' data-toggle='modal' data-target='#modificar{{nombreUsuario}}'>
-                    Modificar
+                <i class="fas fa-user-edit"></i>
                 </button>
                 <!--boton modificar -->
                 <div class='modal fade' id='modificar{{nombreUsuario}}'>
@@ -78,225 +79,37 @@
                         </div>
                     </div>
                 </div></td>
+                <td>
+                <button type='button' class='btn btn-info m-2' data-toggle='modal' data-target='#borrar{{nombreUsuario}}'>
+                <i class="fas fa-user-slash"></i>
+                </button>
+                <!--boton borrar -->
+                <div class='modal fade' id='borrar{{nombreUsuario}}'>
+                    <div class='modal-dialog'>
+                        <div class='modal-content'>
+                            <!-- Modal Header -->
+                            <div class='modal-header'>
+                                <h4 class='modal-title'>Eliminar Usuario</h4>
+                                <button type='button' class='close' data-dismiss='modal'>&times;</button>
+                            </div>
+                            <!-- Modal body -->
+                            <div class='modal-body'>
+                                <h5>Esta seguro que quiere eliminar a {{nombreUsuario}} ?</h5>
+                                <form  action='/ABMUsuarios/darBaja' enctype='multipart/form-data' method='post'>
+                                    <input type="hidden" name="nombreUsuario" value="{{nombreUsuario}}">
+                                    <input class='btn btn-info ml-5 text-center mt-2' type='submit' value='Eliminar'>
+                                </form><br>
+                            </div>
+                            <!-- Modal footer -->
+                            <div class='modal-footer'>
+                                <button type='button' class='btn btn-danger' data-dismiss='modal'>Cerrar</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div></td>
         </tr>
 {{/usuarios}}
-        <tr>
-          <td>AAD</td>
-          <td>AUSENCO</td>
-          <td>$2.38</td>
-          <td>-0.01</td>
-          <td>-1.36%</td>
-        </tr>
-<!--        <tr>-->
-<!--          <td>AAX</td>-->
-<!--          <td>ADELAIDE</td>-->
-<!--          <td>$3.22</td>-->
-<!--          <td>+0.01</td>-->
-<!--          <td>+1.36%</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <td>XXD</td>-->
-<!--          <td>ADITYA BIRLA</td>-->
-<!--          <td>$1.02</td>-->
-<!--          <td>-1.01</td>-->
-<!--          <td>+2.36%</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <td>AAC</td>-->
-<!--          <td>AUSTRALIAN COMPANY </td>-->
-<!--          <td>$1.38</td>-->
-<!--          <td>+2.01</td>-->
-<!--          <td>-0.36%</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <td>AAD</td>-->
-<!--          <td>AUSENCO</td>-->
-<!--          <td>$2.38</td>-->
-<!--          <td>-0.01</td>-->
-<!--          <td>-1.36%</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <td>AAX</td>-->
-<!--          <td>ADELAIDE</td>-->
-<!--          <td>$3.22</td>-->
-<!--          <td>+0.01</td>-->
-<!--          <td>+1.36%</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <td>XXD</td>-->
-<!--          <td>ADITYA BIRLA</td>-->
-<!--          <td>$1.02</td>-->
-<!--          <td>-1.01</td>-->
-<!--          <td>+2.36%</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <td>AAC</td>-->
-<!--          <td>AUSTRALIAN COMPANY </td>-->
-<!--          <td>$1.38</td>-->
-<!--          <td>+2.01</td>-->
-<!--          <td>-0.36%</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <td>AAD</td>-->
-<!--          <td>AUSENCO</td>-->
-<!--          <td>$2.38</td>-->
-<!--          <td>-0.01</td>-->
-<!--          <td>-1.36%</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <td>AAX</td>-->
-<!--          <td>ADELAIDE</td>-->
-<!--          <td>$3.22</td>-->
-<!--          <td>+0.01</td>-->
-<!--          <td>+1.36%</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <td>XXD</td>-->
-<!--          <td>ADITYA BIRLA</td>-->
-<!--          <td>$1.02</td>-->
-<!--          <td>-1.01</td>-->
-<!--          <td>+2.36%</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <td>AAC</td>-->
-<!--          <td>AUSTRALIAN COMPANY </td>-->
-<!--          <td>$1.38</td>-->
-<!--          <td>+2.01</td>-->
-<!--          <td>-0.36%</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <td>AAD</td>-->
-<!--          <td>AUSENCO</td>-->
-<!--          <td>$2.38</td>-->
-<!--          <td>-0.01</td>-->
-<!--          <td>-1.36%</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <td>AAX</td>-->
-<!--          <td>ADELAIDE</td>-->
-<!--          <td>$3.22</td>-->
-<!--          <td>+0.01</td>-->
-<!--          <td>+1.36%</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <td>XXD</td>-->
-<!--          <td>ADITYA BIRLA</td>-->
-<!--          <td>$1.02</td>-->
-<!--          <td>-1.01</td>-->
-<!--          <td>+2.36%</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <td>AAC</td>-->
-<!--          <td>AUSTRALIAN COMPANY </td>-->
-<!--          <td>$1.38</td>-->
-<!--          <td>+2.01</td>-->
-<!--          <td>-0.36%</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <td>AAD</td>-->
-<!--          <td>AUSENCO</td>-->
-<!--          <td>$2.38</td>-->
-<!--          <td>-0.01</td>-->
-<!--          <td>-1.36%</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <td>AAX</td>-->
-<!--          <td>ADELAIDE</td>-->
-<!--          <td>$3.22</td>-->
-<!--          <td>+0.01</td>-->
-<!--          <td>+1.36%</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <td>XXD</td>-->
-<!--          <td>ADITYA BIRLA</td>-->
-<!--          <td>$1.02</td>-->
-<!--          <td>-1.01</td>-->
-<!--          <td>+2.36%</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <td>AAC</td>-->
-<!--          <td>AUSTRALIAN COMPANY </td>-->
-<!--          <td>$1.38</td>-->
-<!--          <td>+2.01</td>-->
-<!--          <td>-0.36%</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <td>AAD</td>-->
-<!--          <td>AUSENCO</td>-->
-<!--          <td>$2.38</td>-->
-<!--          <td>-0.01</td>-->
-<!--          <td>-1.36%</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <td>AAX</td>-->
-<!--          <td>ADELAIDE</td>-->
-<!--          <td>$3.22</td>-->
-<!--          <td>+0.01</td>-->
-<!--          <td>+1.36%</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <td>XXD</td>-->
-<!--          <td>ADITYA BIRLA</td>-->
-<!--          <td>$1.02</td>-->
-<!--          <td>-1.01</td>-->
-<!--          <td>+2.36%</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <td>AAC</td>-->
-<!--          <td>AUSTRALIAN COMPANY </td>-->
-<!--          <td>$1.38</td>-->
-<!--          <td>+2.01</td>-->
-<!--          <td>-0.36%</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <td>AAD</td>-->
-<!--          <td>AUSENCO</td>-->
-<!--          <td>$2.38</td>-->
-<!--          <td>-0.01</td>-->
-<!--          <td>-1.36%</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <td>AAX</td>-->
-<!--          <td>ADELAIDE</td>-->
-<!--          <td>$3.22</td>-->
-<!--          <td>+0.01</td>-->
-<!--          <td>+1.36%</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <td>XXD</td>-->
-<!--          <td>ADITYA BIRLA</td>-->
-<!--          <td>$1.02</td>-->
-<!--          <td>-1.01</td>-->
-<!--          <td>+2.36%</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <td>AAC</td>-->
-<!--          <td>AUSTRALIAN COMPANY </td>-->
-<!--          <td>$1.38</td>-->
-<!--          <td>+2.01</td>-->
-<!--          <td>-0.36%</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <td>AAD</td>-->
-<!--          <td>AUSENCO</td>-->
-<!--          <td>$2.38</td>-->
-<!--          <td>-0.01</td>-->
-<!--          <td>-1.36%</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <td>AAX</td>-->
-<!--          <td>ADELAIDE</td>-->
-<!--          <td>$3.22</td>-->
-<!--          <td>+0.01</td>-->
-<!--          <td>+1.36%</td>-->
-<!--        </tr>-->
-<!--        <tr>-->
-<!--          <td>XXD</td>-->
-<!--          <td>ADITYA BIRLA</td>-->
-<!--          <td>$1.02</td>-->
-<!--          <td>-1.01</td>-->
-<!--          <td>+2.36%</td>-->
-<!--        </tr>-->
       </tbody>
     </table>
   </div>
