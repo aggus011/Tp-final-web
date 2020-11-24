@@ -1,5 +1,5 @@
 <?php
-class homeModel{
+class CargaProformaModel{
     private $database;
 
     public function __construct($database){
@@ -9,9 +9,6 @@ class homeModel{
     public function getUsuarios(){
         return $this->database->query("SELECT * FROM usuario");
     }
-
-    public function darAlta($nombreUsuario){
-        $this->database->queryInsert("UPDATE `usuario` SET `estado` = 1 WHERE `nombreUsuario` = '$nombreUsuario'");
-    }
 }
+
 ?>
