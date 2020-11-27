@@ -1,4 +1,4 @@
-{{> header}}
+{{> headerLog}}
 <section class="contenedor-login">
     <article class="bienvenida">
         <div class="logo"><img class="logoBlanco" id="logoBlanco" src="../public/img/logoBlanco.png" alt="Logo">

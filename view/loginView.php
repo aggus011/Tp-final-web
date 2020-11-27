@@ -1,4 +1,4 @@
-{{> header}}
+{{> headerLog}}
 <main>
     
     <section class="contenedor-login">
