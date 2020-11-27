@@ -20,22 +20,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b30e037-85d7-4d6a-9d7f-267880532341" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recursos/css/general.css" beforeDir="false" afterPath="$PROJECT_DIR$/recursos/css/general.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recursos/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/recursos/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ABMUsuariosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ABMUsuariosController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/ABMUsuariosModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/ABMUsuariosModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/ABMUsuariosView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/ABMUsuariosView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/partial/header.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/view/partial/header.mustache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="composer.json" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/mustache/mustache" />
+    </include_path>
+  </component>
   <component name="ProjectId" id="1jjj83SOErB23HEZNMXRng8P9aj" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -43,10 +63,17 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../simpsons-nunez-daniel" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\Tp-final-web\public" />
+      <recent name="C:\wamp64\www\Tp-final-web\view\recursos\img" />
+      <recent name="C:\wamp64\www\Tp-final-web\view" />
+      <recent name="C:\wamp64\www\Tp-final-web" />
       <recent name="C:\xampp\htdocs\Tp-final-web\recursos\css" />
     </key>
   </component>
@@ -61,7 +88,28 @@
       <workItem from="1604324236616" duration="1779000" />
       <workItem from="1604326125008" duration="1590000" />
       <workItem from="1604329167775" duration="686000" />
+      <workItem from="1604443778752" duration="157000" />
+      <workItem from="1604445451734" duration="1538000" />
+      <workItem from="1604529261407" duration="1817000" />
+      <workItem from="1604537382257" duration="7315000" />
+      <workItem from="1604613372445" duration="16312000" />
+      <workItem from="1604670961655" duration="10033000" />
+      <workItem from="1605276584404" duration="1641000" />
+      <workItem from="1605298668466" duration="3727000" />
+      <workItem from="1605396885821" duration="6159000" />
+      <workItem from="1605414782417" duration="594000" />
+      <workItem from="1605450957107" duration="5067000" />
+      <workItem from="1606090893200" duration="1546000" />
+      <workItem from="1606139198705" duration="11078000" />
     </task>
+    <task id="LOCAL-00001" summary="cambie los directorios">
+      <created>1604443927197</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1604443927197</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -79,14 +127,49 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="cambie los directorios" />
+    <option name="LAST_COMMIT_MESSAGE" value="cambie los directorios" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="288" y="96" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604543630818">
+      <screen x="0" y="0" width="1676" height="902" />
+    </state>
+    <state x="288" y="96" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1676.902@0.0.1676.902" timestamp="1604543630818" />
+    <state x="501" y="233" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604543398694">
+      <screen x="0" y="0" width="1676" height="902" />
+    </state>
+    <state x="501" y="233" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1676.902@0.0.1676.902" timestamp="1604543398694" />
+    <state x="564" y="146" key="FileChooserDialogImpl" timestamp="1604628432485">
+      <screen x="0" y="0" width="1676" height="902" />
+    </state>
+    <state x="564" y="146" key="FileChooserDialogImpl/0.0.1676.902@0.0.1676.902" timestamp="1604628432485" />
     <state x="787" y="243" key="NewPhpClassDialog" timestamp="1604324658830">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="787" y="243" key="NewPhpClassDialog/1920.34.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1604324658830" />
-    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1604329832822">
+    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1605241174198">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="693" y="384" key="NewPhpFileDialog/0.0.1676.902@0.0.1676.902" timestamp="1604543272378" />
+    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605241174198" />
     <state x="794" y="443" key="NewPhpFileDialog/1920.34.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1604329832822" />
+    <state x="229" y="9" key="SettingsEditor" timestamp="1604544056803">
+      <screen x="0" y="0" width="1676" height="902" />
+    </state>
+    <state x="229" y="9" key="SettingsEditor/0.0.1676.902@0.0.1676.902" timestamp="1604544056803" />
+    <state x="285" y="252" width="1486" height="660" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1606155976238">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="285" y="252" width="1486" height="660" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606155976238" />
+    <state x="483" y="118" width="708" height="664" key="find.popup" timestamp="1604617298162">
+      <screen x="0" y="0" width="1676" height="902" />
+    </state>
+    <state x="483" y="118" width="708" height="664" key="find.popup/0.0.1676.902@0.0.1676.902" timestamp="1604617298162" />
+    <state x="616" y="282" width="963" height="913" key="search.everywhere.popup" timestamp="1605408668656">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="416" y="0" width="840" height="1034" key="search.everywhere.popup/0.0.1676.902@0.0.1676.902" timestamp="1604630765549" />
+    <state x="616" y="282" width="963" height="913" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1605408668656" />
   </component>
 </project>
