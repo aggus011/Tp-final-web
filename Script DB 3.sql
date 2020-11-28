@@ -1,4 +1,4 @@
-
+/*drop SCHEMA `grupo02`;*/
 CREATE SCHEMA IF NOT EXISTS `grupo02` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `grupo02` ;
 
@@ -28,14 +28,6 @@ CREATE TABLE IF NOT EXISTS `grupo02`.`Marca` (
   PRIMARY KEY (`idMarca`))
 ENGINE = InnoDB;
 
-CREATE TABLE IF NOT EXISTS `grupo02`.`Cliente` (
-  `idCliente` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `nombre` VARCHAR(25) NULL,
-  `apellido` VARCHAR(25) NULL,
-  `cuitOcuil` VARCHAR(25) NULL,
-  PRIMARY KEY (`idCliente`))
-ENGINE = InnoDB;
-
 CREATE TABLE IF NOT EXISTS `grupo02`.`Direccion` (
   `idDireccion` INT NOT NULL AUTO_INCREMENT,
   `calle` VARCHAR(45) NULL,
@@ -45,6 +37,23 @@ CREATE TABLE IF NOT EXISTS `grupo02`.`Direccion` (
   `pais` VARCHAR(45) NULL,
   PRIMARY KEY (`idDireccion`)
   ) 
+ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS `grupo02`.`Cliente` (
+  `idCliente` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(25) NULL,
+  `apellido` VARCHAR(25) NULL,
+  `cuitOcuil` VARCHAR(25) NULL,
+  `denominacion` VARCHAR(25) NULL,
+  `telefono` VARCHAR(25) NULL,
+  `email` VARCHAR(25) NULL,
+  `contacto1` VARCHAR(25) NULL,
+  `contacto2` VARCHAR(25) NULL,
+  `fk_Cliente_Direccion` INT NULL,
+  PRIMARY KEY (`idCliente`),
+  CONSTRAINT `fk_Cliente_Direccion`
+    FOREIGN KEY (`fk_Cliente_Direccion`)
+    REFERENCES `grupo02`.`Direccion` (`idDireccion`))
 ENGINE = InnoDB;
 
 CREATE TABLE IF NOT EXISTS `grupo02`.`Usuario` (
