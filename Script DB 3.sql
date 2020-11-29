@@ -77,6 +77,52 @@ CREATE TABLE IF NOT EXISTS `grupo02`.`Usuario` (
     REFERENCES `grupo02`.`Direccion` (`idDireccion`))
 ENGINE = InnoDB;
 
+CREATE TABLE IF NOT EXISTS `grupo02`.`tractor` (
+  `idTractor` INT,
+  `patenteTractor` VARCHAR(50),
+  `marca` VARCHAR(50),
+  `modelo` VARCHAR(50),
+  `motor` INT,
+  `chasis` VARCHAR(50),
+  PRIMARY KEY (`idTractor`))
+ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS `grupo02`.`arrastrado` (
+  `idArrastrado` INT,
+  `patenteArrastrado` VARCHAR(50) NOT NULL,
+  `tipo` VARCHAR(50),
+  `chasis` INT,
+  PRIMARY KEY (`idArrastrado`))
+ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS `grupo02`.`costeo` (
+  `idCosteo` INT AUTO_INCREMENT,
+  `kilometros` INT NOT NULL,
+  `fk_Costeo_Combustible` INT UNSIGNED NOT NULL,
+  `ETD` INT NOT NULL,
+  `ETA` INT NOT NULL,
+  `viatico` DOUBLE NOT NULL,
+  `peaje_pasaje` DOUBLE NOT NULL,
+  `extras` VARCHAR(100),
+  `hazard` VARCHAR(100),
+  `extra` VARCHAR(100),
+  `reefer` VARCHAR (100),
+  `fee` DOUBLE,
+  PRIMARY KEY (`idCosteo`),
+  CONSTRAINT `fk_Costeo_Combustible`
+    FOREIGN KEY (`fk_Costeo_Combustible`)
+    REFERENCES `grupo02`.`Combustible` (`idCombustible`))
+ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS `grupo02`.`carga`(
+  `idCarga` INT AUTO_INCREMENT,
+  `tipo` VARCHAR(50),
+  `pesoNeto` DOUBLE,
+  `hazard` VARCHAR(100),
+  `reefer` VARCHAR(100),
+  PRIMARY KEY (`idCarga`))
+ENGINE = InnoDB;
+
 CREATE TABLE IF NOT EXISTS `grupo02`.`DatosReal` (
   `idDatosReal` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `fechaYHoraInicio` DATETIME NULL,
@@ -175,9 +221,10 @@ CREATE TABLE IF NOT EXISTS `grupo02`.`Viaje` (
   `fk_Viaje_ViajeReal` INT UNSIGNED NOT NULL,
   `fk_Viaje_Direccion_Origen` INT NOT NULL,
   `fk_Viaje_Direccion_Destino` INT NOT NULL,
-  'fk_Viaje_Tractor' VARCHAR(50) NULL,
-  'fk_Viaje_Arrastrado' VARCHAR(50) NULL,
-  'fk_Viaje_Costeo' int NULL,
+  `fk_Viaje_Tractor` INT,
+  `fk_Viaje_Arrastrado` INT,
+  `fk_Viaje_Costeo` int,
+  `fk_Viaje_Carga` int,
   PRIMARY KEY (`idViajeReal`),
   CONSTRAINT `fk_Viaje_Cliente`
     FOREIGN KEY (`fk_Viaje_Cliente`)
@@ -197,15 +244,18 @@ CREATE TABLE IF NOT EXISTS `grupo02`.`Viaje` (
     CONSTRAINT `fk_Viaje_Direccion_Destino`
     FOREIGN KEY (`fk_Viaje_Direccion_Destino`)
     REFERENCES `grupo02`.`Direccion` (`idDireccion`),
-    CONSTRAINT 'fk_Viaje_Tractor'
-    FOREIGN KEY ('fk_Viaje_Tractor')
-    REFERENCES 'grupo02'.'tractor' ('patente'),
-    CONSTRAINT 'fk_Viaje_Arrastrado'
-    FOREIGN KEY ('fk_Viaje_Arrastrado')
-    REFERENCES 'grupo02'.'arrastrado' ('patente'),
-    CONSTRAINT 'fk_Viaje_Costeo'
-    FOREIGN KEY ('fk_Viaje_Costeo')
-    REFERENCES 'grupo02'.'costeo' ('idCosteo'))
+    CONSTRAINT `fk_Viaje_Tractor`
+    FOREIGN KEY (`fk_Viaje_Tractor`)
+    REFERENCES `grupo02`.`tractor` (`idTractor`),
+    CONSTRAINT `fk_Viaje_Arrastrado`
+    FOREIGN KEY (`fk_Viaje_Arrastrado`)
+    REFERENCES `grupo02`.`arrastrado` (`idArrastrado`),
+    CONSTRAINT `fk_Viaje_Costeo`
+    FOREIGN KEY (`fk_Viaje_Costeo`)
+    REFERENCES `grupo02`.`costeo` (`idCosteo`),
+    CONSTRAINT `fk_Viaje_Carga`
+    FOREIGN KEY (`fk_Viaje_Carga`)
+    REFERENCES `grupo02`.`carga` (`idCarga`))
 ENGINE = InnoDB;
 
 INSERT INTO `grupo02`.`Role` (`nombre`)
@@ -230,37 +280,3 @@ VALUES
 'SIN DIRECCION',
 'SIN DIRECCION');
 
-CREATE TABLE IF NOT EXISTS `grupo02`.`tractor` (
-  'patente' varchar(50) not null,
-  'marca' varchar(50),
-  'modelo' varchar(50),
-  'motor' int,
-  'chasis' varchar(50),
-  PRIMARY KEY (`patente`))
-ENGINE = InnoDB;
-
-CREATE TABLE IF NOT EXISTS `grupo02`.`arrastrado` (
-  'patente' varchar(50) NOT NULL,
-  'tipo' varchar(50),
-  'chasis' int,
-  PRIMARY KEY ('patente'))
-ENGINE = InnoDB;
-
-CREATE TABLE IF NOT EXISTS `grupo02`.`costeo` (
-  'idCosteo' int AUTO_INCREMENT NOT NULL,
-  'kilometros' int NOT NULL,
-  'fk_Costeo_Combustible' int,
-  'ETD' int NOT NULL,
-  'ETA' int NOT NULL,
-  'viatico' double NOT NULL,
-  'peaje_pasaje' double NOT NULL,
-  'extras' varchar(100),
-  'hazard' varchar(100),
-  'extra' varchar(100),
-  'reefer' varchar (100),
-  'fee' double,
-  PRIMARY KEY ('fk_Costeo_Combustible'),
-  CONSTRAINT 'fk_Costeo_Combustible'
-    FOREIGN KEY ('fk_Costeo_Combustible')
-    REFERENCES 'grupo02'.'Combustible' ('idCombustible'))
-ENGINE = InnoDB;
