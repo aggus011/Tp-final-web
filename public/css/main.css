@@ -97,6 +97,7 @@ input[type=submit].input-submit {
     background: rgba(58, 123, 213, 0.5);
     cursor: auto; }
 
+    
 .contenedor-submit {
   margin: 20px 0;
   display: flex;
