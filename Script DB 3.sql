@@ -1,4 +1,4 @@
-/*drop SCHEMA `grupo02`;*/
+drop SCHEMA `grupo02`;
 CREATE SCHEMA IF NOT EXISTS `grupo02` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `grupo02` ;
 
@@ -173,7 +173,8 @@ CREATE TABLE IF NOT EXISTS `grupo02`.`Viaje` (
   `fk_Viaje_Vehiculo` INT UNSIGNED NOT NULL,
   `fk_Viaje_ViajeEstimado` INT UNSIGNED NOT NULL,
   `fk_Viaje_ViajeReal` INT UNSIGNED NOT NULL,
-  `fk_Viaje_Direccion` INT NOT NULL,
+  `fk_Viaje_Direccion_Origen` INT NOT NULL,
+  `fk_Viaje_Direccion_Destino` INT NOT NULL,
   PRIMARY KEY (`idViajeReal`),
   CONSTRAINT `fk_Viaje_Cliente`
     FOREIGN KEY (`fk_Viaje_Cliente`)
@@ -187,8 +188,11 @@ CREATE TABLE IF NOT EXISTS `grupo02`.`Viaje` (
   CONSTRAINT `fk_Viaje_ViajeReal`
     FOREIGN KEY (`fk_Viaje_ViajeReal`)
     REFERENCES `grupo02`.`DatosReal` (`idDatosReal`),
-  CONSTRAINT `fk_Viaje_Direccion`
-    FOREIGN KEY (`fk_Viaje_Direccion`)
+  CONSTRAINT `fk_Viaje_Direccion_Origen`
+    FOREIGN KEY (`fk_Viaje_Direccion_Origen`)
+    REFERENCES `grupo02`.`Direccion` (`idDireccion`),
+    CONSTRAINT `fk_Viaje_Direccion_Destino`
+    FOREIGN KEY (`fk_Viaje_Direccion_Destino`)
     REFERENCES `grupo02`.`Direccion` (`idDireccion`))
 ENGINE = InnoDB;
 

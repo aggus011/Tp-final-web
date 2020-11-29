@@ -1,9 +1,8 @@
 {{> header}}
 <section class="contenedor-login" style="margin-left: 70px">
-        <form action='/CargaProforma/addProforma' method='post' id="formRegister">
-        </div>
+        <form action='/CargaProforma/addProforma' method='post' id="formRegister" style="width: 80%;" class="ml-5 mt-5">
         <label>Datos Cliente</label>
-        <div class="grupo-login">
+                <div class="grupo-login" >
                     <input type='text' name='nombreClienteProforma' id='nombreClienteProforma' autocomplete='off' required>
                     <label for='nombreClienteProforma'>Nombre</label>
                     <span class="input-bar"></span>
@@ -81,10 +80,76 @@
                     <span class="input-bar"></span>
                     <small class="mensajeError" id="msjPaisProforma"></small>
                 </div>
-                
+
+                <label>Datos Viaje</label>
+
+                <label>Direccion Origen</label>
+                <div class="grupo-login">
+                    <input type='text' name='calleViajeOrigen' id='calleViajeOrigen' autocomplete='off' required>
+                    <label for='calleViajeOrigen'>Calle Origen</label>
+                    <span class="input-bar"></span>
+                    <small class="mensajeError" id="msjcalleViajeOrigen"></small>
+                </div>
+                <div class="grupo-login">
+                    <input type='number' name='numeroViajeOrigen' id='numeroViajeOrigen' autocomplete='off' required>
+                    <label for='numeroViajeOrigen'>Numero Origen</label>
+                    <span class="input-bar"></span>
+                    <small class="mensajeError" id="msjnumeroViajeOrigen"></small>
+                </div>
+                <div class="grupo-login">
+                    <input type='text' name='localidadViajeOrigen' id='localidadViajeOrigen' autocomplete='off' required>
+                    <label for='localidadViajeOrigen'>Localidad Origen</label>
+                    <span class="input-bar"></span>
+                    <small class="mensajeError" id="msjlocalidadViajeOrigen"></small>
+                </div>
+                <div class="grupo-login">
+                    <input type='text' name='provinciaViajeOrigen' id='provinciaViajeOrigen' autocomplete='off' required>
+                    <label for='provinciaViajeOrigen'>Provincia Origen</label>
+                    <span class="input-bar"></span>
+                    <small class="mensajeError" id="msjprovinciaViajeOrigen"></small>
+                </div>
+                <div class="grupo-login">
+                    <input type='text' name='paisViajeOrigen' id='paisViajeOrigen' autocomplete='off' required>
+                    <label for='paisViajeOrigen'>País Origen</label>
+                    <span class="input-bar"></span>
+                    <small class="mensajeError" id="msjPaisViajeOrigen"></small>
+                </div>
+                <label>Direccion Destino</label>
+                <div class="grupo-login">
+                    <input type='text' name='calleViajeDestino' id='calleViajeDestino' autocomplete='off' required>
+                    <label for='calleViajeDestino'>Calle Destino</label>
+                    <span class="input-bar"></span>
+                    <small class="mensajeError" id="msjcalleViajeDestino"></small>
+                </div>
+                <div class="grupo-login">
+                    <input type='number' name='numeroViajeDestino' id='numeroViajeDestino' autocomplete='off' required>
+                    <label for='numeroViajeDestino'>Numero Destino</label>
+                    <span class="input-bar"></span>
+                    <small class="mensajeError" id="msjnumeroViajeDestino"></small>
+                </div>
+                <div class="grupo-login">
+                    <input type='text' name='localidadViajeDestino' id='localidadViajeDestino' autocomplete='off' required>
+                    <label for='localidadViajeDestino'>Localidad Destino</label>
+                    <span class="input-bar"></span>
+                    <small class="mensajeError" id="msjlocalidadViajeDestino"></small>
+                </div>
+                <div class="grupo-login">
+                    <input type='text' name='provinciaViajeDestino' id='provinciaViajeDestino' autocomplete='off' required>
+                    <label for='provinciaViajeDestino'>Provincia Destino</label>
+                    <span class="input-bar"></span>
+                    <small class="mensajeError" id="msjprovinciaViajeDestino"></small>
+                </div>
+                <div class="grupo-login">
+                    <input type='text' name='paisViajeDestino' id='paisViajeDestino' autocomplete='off' required>
+                    <label for='paisViajeDestino'>País Destino</label>
+                    <span class="input-bar"></span>
+                    <small class="mensajeError" id="msjPaisViajeDestino"></small>
+                </div>
+
                 <div class='contenedor-submit'>
                     <input type='submit' class="input-submit" id="inputRegister" value='Enviar' >
                 </div>
+               
             </form>
     </section>
 {{> footer}}

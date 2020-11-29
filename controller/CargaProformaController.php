@@ -31,7 +31,7 @@ class CargaProformaController
         $paisClienteProforma = $_POST["paisProforma"];
         $idDireccion = $this->CargaProformaModel->insertaDireccionCliente($calleClienteProforma,$numeroClienteProforma,$localidadClienteProforma,$provinciaClienteProforma,$paisClienteProforma);
         $idCliente = $this->CargaProformaModel->insertaCliente($clienteNombre,$clienteApellido,$clienteDenominacion,$clienteCuit,$clienteTelefono,$clienteEmail,$clienteContacto1,$clienteContacto2,$idDireccion);
-
+        echo $this->render->render("view/CargaProformaView.php");
     }
 }
 ?>
