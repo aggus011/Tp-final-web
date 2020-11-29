@@ -14,7 +14,7 @@ Cargar Datos Cliente
             </div>
             <!-- Modal body -->
             <div class='modal-body'>
-                <form  action='/CargaProforma/addProforma' enctype='multipart/form-data' method='post'>
+                <form  action='/CargaProforma/cargaCliente' enctype='multipart/form-data' method='post'>
                     <div class="grupo-login" >
                         <input type='text' name='nombreClienteProforma' id='nombreClienteProforma' autocomplete='off' required>
                         <label for='nombreClienteProforma'>Nombre</label>
@@ -116,7 +116,7 @@ Cargar Direccion de Origen del Viaje
             </div>
             <!-- Modal body -->
             <div class='modal-body'>
-                <form  action='/CargaProforma/addProforma' enctype='multipart/form-data' method='post'>
+                <form  action='/CargaProforma/cargaDireccionOrigenViaje' enctype='multipart/form-data' method='post'>
                 <div class="grupo-login">
                     <input type='text' name='calleViajeOrigen' id='calleViajeOrigen' autocomplete='off' required>
                     <label for='calleViajeOrigen'>Calle Origen</label>
@@ -170,7 +170,61 @@ Cargar Direccion de Destino del Viaje
             </div>
             <!-- Modal body -->
             <div class='modal-body'>
-                <form  action='/CargaProforma/addProforma' enctype='multipart/form-data' method='post'>
+                <form  action='/CargaProforma/cargaDireccionDestinoViaje' enctype='multipart/form-data' method='post'>
+                <div class="grupo-login">
+                    <input type='text' name='calleViajeDestino' id='calleViajeDestino' autocomplete='off' required>
+                    <label for='calleViajeDestino'>Calle Destino</label>
+                    <span class="input-bar"></span>
+                    <small class="mensajeError" id="msjcalleViajeDestino"></small>
+                </div>
+                <div class="grupo-login">
+                    <input type='number' name='numeroViajeDestino' id='numeroViajeDestino' autocomplete='off' required>
+                    <label for='numeroViajeDestino'>Numero Destino</label>
+                    <span class="input-bar"></span>
+                    <small class="mensajeError" id="msjnumeroViajeDestino"></small>
+                </div>
+                <div class="grupo-login">
+                    <input type='text' name='localidadViajeDestino' id='localidadViajeDestino' autocomplete='off' required>
+                    <label for='localidadViajeDestino'>Localidad Destino</label>
+                    <span class="input-bar"></span>
+                    <small class="mensajeError" id="msjlocalidadViajeDestino"></small>
+                </div>
+                <div class="grupo-login">
+                    <input type='text' name='provinciaViajeDestino' id='provinciaViajeDestino' autocomplete='off' required>
+                    <label for='provinciaViajeDestino'>Provincia Destino</label>
+                    <span class="input-bar"></span>
+                    <small class="mensajeError" id="msjprovinciaViajeDestino"></small>
+                </div>
+                <div class="grupo-login">
+                    <input type='text' name='paisViajeDestino' id='paisViajeDestino' autocomplete='off' required>
+                    <label for='paisViajeDestino'>País Destino</label>
+                    <span class="input-bar"></span>
+                    <small class="mensajeError" id="msjPaisViajeDestino"></small>
+                </div>
+                </form>
+            </div>
+            <!-- Modal footer -->
+            <div class='modal-footer'>
+            <input type='submit' class="input-submit" id="inputRegister" value='Enviar' >
+            </div>
+        </div>
+    </div>
+</div>
+
+<button type='button' class='btn btn-info m-2' data-toggle='modal' data-target='#datosCargaViaje'>
+Cargar Carga de Viaje
+</button>
+<div class='modal fade' id='datosCargaViaje'>
+    <div class='modal-dialog'>
+        <div class='modal-content'>
+            <!-- Modal Header -->
+            <div class='modal-header'>
+                <h4 class='modal-title'>Carga de Viaje</h4>
+                <button type='button' class='close' data-dismiss='modal'>&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class='modal-body'>
+                <form  action='/CargaProforma/cargaDireccionDestinoViaje' enctype='multipart/form-data' method='post'>
                 <div class="grupo-login">
                     <input type='text' name='calleViajeDestino' id='calleViajeDestino' autocomplete='off' required>
                     <label for='calleViajeDestino'>Calle Destino</label>
