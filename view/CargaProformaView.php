@@ -1,20 +1,8 @@
 {{> header}}
-<div style='margin-left:80px'>
-<button type='button' class='btn btn-info m-2' data-toggle='modal' data-target='#datosClientes'>
-Cargar Datos Cliente
-</button>
-
-<div class='modal fade' id='datosClientes'>
-    <div class='modal-dialog'>
-        <div class='modal-content'>
-            <!-- Modal Header -->
-            <div class='modal-header'>
-                <h4 class='modal-title'>Datos Cliente</h4>
-                <button type='button' class='close' data-dismiss='modal'>&times;</button>
-            </div>
-            <!-- Modal body -->
-            <div class='modal-body'>
-                <form  action='/CargaProforma/cargaCliente' enctype='multipart/form-data' method='post'>
+<div style='margin-left:80px;margin-right: 15px;'>
+    <br>
+        <h4>Datos cliente</h4>
+                <form  action='/CargaProforma/cargaProforma' enctype='multipart/form-data' method='post'>
                     <div class="grupo-login" >
                         <input type='text' name='nombreClienteProforma' id='nombreClienteProforma' autocomplete='off' required>
                         <label for='nombreClienteProforma'>Nombre</label>
@@ -93,30 +81,7 @@ Cargar Datos Cliente
                         <span class="input-bar"></span>
                         <small class="mensajeError" id="msjPaisProforma"></small>
                     </div>
-                </form>
-            </div>
-            <!-- Modal footer -->
-            <div class='modal-footer'>
-            <input type='submit' class="input-submit" id="inputRegister" value='Enviar' >
-            </div>
-        </div>
-    </div>
-</div>
-
-<button type='button' class='btn btn-info m-2' data-toggle='modal' data-target='#datosDireccionOrigenViaje'>
-Cargar Direccion de Origen del Viaje
-</button>
-<div class='modal fade' id='datosDireccionOrigenViaje'>
-    <div class='modal-dialog'>
-        <div class='modal-content'>
-            <!-- Modal Header -->
-            <div class='modal-header'>
-                <h4 class='modal-title'>Direccion de Origen del Viaje</h4>
-                <button type='button' class='close' data-dismiss='modal'>&times;</button>
-            </div>
-            <!-- Modal body -->
-            <div class='modal-body'>
-                <form  action='/CargaProforma/cargaDireccionOrigenViaje' enctype='multipart/form-data' method='post'>
+                    <h4>Direccion de Origen del Viaje</h4>
                 <div class="grupo-login">
                     <input type='text' name='calleViajeOrigen' id='calleViajeOrigen' autocomplete='off' required>
                     <label for='calleViajeOrigen'>Calle Origen</label>
@@ -147,30 +112,8 @@ Cargar Direccion de Origen del Viaje
                     <span class="input-bar"></span>
                     <small class="mensajeError" id="msjPaisViajeOrigen"></small>
                 </div>
-                </form>
-            </div>
-            <!-- Modal footer -->
-            <div class='modal-footer'>
-            <input type='submit' class="input-submit" id="inputRegister" value='Enviar' >
-            </div>
-        </div>
-    </div>
-</div>
 
-<button type='button' class='btn btn-info m-2' data-toggle='modal' data-target='#datosDireccionDestinoViaje'>
-Cargar Direccion de Destino del Viaje
-</button>
-<div class='modal fade' id='datosDireccionDestinoViaje'>
-    <div class='modal-dialog'>
-        <div class='modal-content'>
-            <!-- Modal Header -->
-            <div class='modal-header'>
-                <h4 class='modal-title'>Direccion de Destino del Viaje</h4>
-                <button type='button' class='close' data-dismiss='modal'>&times;</button>
-            </div>
-            <!-- Modal body -->
-            <div class='modal-body'>
-                <form  action='/CargaProforma/cargaDireccionDestinoViaje' enctype='multipart/form-data' method='post'>
+                    <h4>Direccion de Destino del Viaje</h4>
                 <div class="grupo-login">
                     <input type='text' name='calleViajeDestino' id='calleViajeDestino' autocomplete='off' required>
                     <label for='calleViajeDestino'>Calle Destino</label>
@@ -201,70 +144,81 @@ Cargar Direccion de Destino del Viaje
                     <span class="input-bar"></span>
                     <small class="mensajeError" id="msjPaisViajeDestino"></small>
                 </div>
-                </form>
-            </div>
-            <!-- Modal footer -->
-            <div class='modal-footer'>
-            <input type='submit' class="input-submit" id="inputRegister" value='Enviar' >
-            </div>
-        </div>
-    </div>
-</div>
 
-<button type='button' class='btn btn-info m-2' data-toggle='modal' data-target='#datosCargaViaje'>
-Cargar Carga de Viaje
-</button>
-<div class='modal fade' id='datosCargaViaje'>
-    <div class='modal-dialog'>
-        <div class='modal-content'>
-            <!-- Modal Header -->
-            <div class='modal-header'>
-                <h4 class='modal-title'>Carga de Viaje</h4>
-                <button type='button' class='close' data-dismiss='modal'>&times;</button>
-            </div>
-            <!-- Modal body -->
-            <div class='modal-body'>
-                <form  action='/CargaProforma/cargaDireccionDestinoViaje' enctype='multipart/form-data' method='post'>
+                <h4>Carga del Viaje</h4>
                 <div class="grupo-login">
-                    <input type='text' name='calleViajeDestino' id='calleViajeDestino' autocomplete='off' required>
-                    <label for='calleViajeDestino'>Calle Destino</label>
-                    <span class="input-bar"></span>
-                    <small class="mensajeError" id="msjcalleViajeDestino"></small>
-                </div>
-                <div class="grupo-login">
-                    <input type='number' name='numeroViajeDestino' id='numeroViajeDestino' autocomplete='off' required>
-                    <label for='numeroViajeDestino'>Numero Destino</label>
-                    <span class="input-bar"></span>
-                    <small class="mensajeError" id="msjnumeroViajeDestino"></small>
-                </div>
-                <div class="grupo-login">
-                    <input type='text' name='localidadViajeDestino' id='localidadViajeDestino' autocomplete='off' required>
-                    <label for='localidadViajeDestino'>Localidad Destino</label>
-                    <span class="input-bar"></span>
-                    <small class="mensajeError" id="msjlocalidadViajeDestino"></small>
-                </div>
-                <div class="grupo-login">
-                    <input type='text' name='provinciaViajeDestino' id='provinciaViajeDestino' autocomplete='off' required>
-                    <label for='provinciaViajeDestino'>Provincia Destino</label>
-                    <span class="input-bar"></span>
-                    <small class="mensajeError" id="msjprovinciaViajeDestino"></small>
-                </div>
-                <div class="grupo-login">
-                    <input type='text' name='paisViajeDestino' id='paisViajeDestino' autocomplete='off' required>
-                    <label for='paisViajeDestino'>País Destino</label>
-                    <span class="input-bar"></span>
-                    <small class="mensajeError" id="msjPaisViajeDestino"></small>
-                </div>
-                </form>
-            </div>
-            <!-- Modal footer -->
-            <div class='modal-footer'>
-            <input type='submit' class="input-submit" id="inputRegister" value='Enviar' >
-            </div>
-        </div>
-    </div>
-</div>
 
+                    <label style=" top: -20px; left: -5px; font-size: 12px; color: #3a7bd5; ">Tipo de carga</label><br>
+                    <select class="form-control" name="tipoCarga">
+                        <option>Granel</option>
+                        <option>Liquida</option>
+                        <option>Container 20´</option>
+                        <option>Container 40´</option>
+                        <option>Jaula</option>
+                        <option>CarCarrier</option>
+                    </select>
+<!--                    <span>-->
+<!--                        <input type="radio" name="" >-->
+<!--                    </span>-->
+                </div>
+                <div class="grupo-login">
+
+                    <input name='pesoCarga' id='localidadViajeDestino' type='number' min="1" autocomplete='off' required>
+                    <label  for='localidadViajeDestino'>Peso Neto</label><br>
+
+
+                </div>
+                <div class="grupo-login">
+                    <label style=" top: -20px; left: -5px; font-size: 12px; color: #3a7bd5; ">Hazard</label><br>
+                    <span>
+                        <input type="radio" name="hazard" value="si"> si
+                        <input type="radio" name="hazard" value="no"checked> no
+                    </span>
+                    <select class="form-control" name="claseHazard">
+                        <option value="">En caso afirmativo elija N° de clase</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                    </select>
+                </div>
+                <div class="grupo-login">
+                    <label style=" top: -20px; left: -5px; font-size: 12px; color: #3a7bd5; ">Reefer</label><br>
+                    <span>
+                        <input type="radio" name="reefer" value="si"> si
+                        <input type="radio" name="reefer" value="no" checked> no
+                    </span>
+                    <input type='number' name='temperaturaReefer' placeholder="En caso afirmativo indique temperatura en celcius" autocomplete='off'>
+                </div>
+                    <h4>Costeo estimado</h4>
+                    <div>
+                        <label style="font-size: 12px; color: #3a7bd5; ">Kilometros por recorrer</label><br>
+                        <input class="form-control" type='number' name='kilometrosEstimado' placeholder="Kilometros estimados" autocomplete='off'><br>
+                        <label style="font-size: 12px; color: #3a7bd5; ">Combustible estimado</label><br>
+                        <input class="form-control"  type='number' name='combustiblesEstimado' placeholder="Combustible en litros estimados" autocomplete='off'><br>
+                        <label style="font-size: 12px; color: #3a7bd5; ">ETD</label><br>
+                        <input class="form-control"  type='number' name='etd' placeholder="Tiempo estimado de salida (en horas)" autocomplete='off'><br>
+                        <label style="font-size: 12px; color: #3a7bd5; ">ETA</label><br>
+                        <input class="form-control"  type='number' name='eta' placeholder="Tiempo estimado de llegada (en horas)" autocomplete='off'><br>
+                        <label style="font-size: 12px; color: #3a7bd5; ">Viaticos estimados</label><br>
+                        <input class="form-control"  type='number' name='viaticoEstimado' placeholder="Costo viaticos estimados" autocomplete='off'><br>
+                        <label style="font-size: 12px; color: #3a7bd5; ">Peajes y pasajes </label><br>
+                        <input class="form-control"  type='number' name='peypaEstimado' placeholder="Costo peajes y pasajes estimados" autocomplete='off'><br>
+                        <label style="font-size: 12px; color: #3a7bd5; ">Extras</label><br>
+                        <input class="form-control"  type='number' name='extrasEstimado' placeholder="Costo extras estimados" autocomplete='off'><br>
+                        <label style="font-size: 12px; color: #3a7bd5; ">Costo hazard</label><br>
+                        <input class="form-control"  type='number' name='hazardEstimado' placeholder="Costo hazard estimado" autocomplete='off'><br>
+                        <label style="font-size: 12px; color: #3a7bd5; ">Costo Reefer </label><br>
+                        <input class="form-control"  type='number' name='reeferEstimado' placeholder="Costo reefer estimados" autocomplete='off'><br>
+                    </div>
+    <div class="grupo-login">
+        <input type='submit' class="input-submit" id="inputRegister" value='Enviar' ></div>
+                </form>
 </div>
 
 {{> footer}}
