@@ -119,16 +119,23 @@ CREATE TABLE IF NOT EXISTS `grupo02`.`carga`(
   `tipo` VARCHAR(50),
   `pesoNeto` DOUBLE,
   `hazard` VARCHAR(100),
+  `claseHazard` VARCHAR(100),
   `reefer` VARCHAR(100),
+  `temperaturaReefer` VARCHAR(100),
   PRIMARY KEY (`idCarga`))
 ENGINE = InnoDB;
 
 CREATE TABLE IF NOT EXISTS `grupo02`.`DatosReal` (
   `idDatosReal` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `fechaYHoraInicio` DATETIME NULL,
-  `fechaYHoraFinalizacion` DATETIME NULL,
-  `kilometrosReales` INT NULL,
+  `kilometrosReal` INT NULL,
   `fk_DatosReal_Combustible` INT UNSIGNED NOT NULL,
+  `ETD` DATETIME NULL,
+  `ETA` DATETIME NULL,
+  `viatico` DOUBLE NOT NULL,
+  `peaje_pasaje` DOUBLE NOT NULL,
+  `extras` VARCHAR(100),
+  `hazard` VARCHAR(100),
+  `reefer` VARCHAR (100),
   PRIMARY KEY (`idDatosReal`),
   CONSTRAINT `fk_DatosReal_Combustible`
     FOREIGN KEY (`fk_DatosReal_Combustible`)
@@ -137,14 +144,16 @@ ENGINE = InnoDB;
 
 CREATE TABLE IF NOT EXISTS `grupo02`.`DatosEstimados` (
   `idDatosEstimados` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `fechaYHoraInicio` DATETIME NULL,
   `kilometrosEstimados` INT NULL,
-  `fk_DatosEstimados_Combustible` INT UNSIGNED NOT NULL,
-  `fechaYHoraFinalizacion` DATETIME NULL,
-  PRIMARY KEY (`idDatosEstimados`),
-  CONSTRAINT `fk_DatosEstimados_Combustible`
-    FOREIGN KEY (`fk_DatosEstimados_Combustible`)
-    REFERENCES `grupo02`.`Combustible` (`idCombustible`))
+  `combustible` INT UNSIGNED NOT NULL,
+  `ETD` DATETIME NULL,
+  `ETA` DATETIME NULL,
+  `viatico` DOUBLE NOT NULL,
+  `peaje_pasaje` DOUBLE NOT NULL,
+  `extras` VARCHAR(100),
+  `hazard` VARCHAR(100),
+  `reefer` VARCHAR (100),
+  PRIMARY KEY (`idDatosEstimados`))
 ENGINE = InnoDB;
 
 CREATE TABLE IF NOT EXISTS `grupo02`.`EstadoDelVehiculo` (
@@ -213,17 +222,14 @@ ENGINE = InnoDB;
 
 CREATE TABLE IF NOT EXISTS `grupo02`.`Viaje` (
   `idViajeReal` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `carga` VARCHAR(45) NULL,
-  `costo` DECIMAL(10,2) NULL,
   `fk_Viaje_Cliente` INT UNSIGNED NOT NULL,
-  `fk_Viaje_Vehiculo` INT UNSIGNED NOT NULL,
+  `fk_Viaje_Vehiculo` INT UNSIGNED NULL,
   `fk_Viaje_ViajeEstimado` INT UNSIGNED NOT NULL,
-  `fk_Viaje_ViajeReal` INT UNSIGNED NOT NULL,
+  `fk_Viaje_ViajeReal` INT UNSIGNED NULL,
   `fk_Viaje_Direccion_Origen` INT NOT NULL,
   `fk_Viaje_Direccion_Destino` INT NOT NULL,
-  `fk_Viaje_Tractor` INT,
-  `fk_Viaje_Arrastrado` INT,
-  `fk_Viaje_Costeo` int,
+  `fk_Viaje_Tractor` INT NULL,
+  `fk_Viaje_Arrastrado` INT NULL,
   `fk_Viaje_Carga` int,
   PRIMARY KEY (`idViajeReal`),
   CONSTRAINT `fk_Viaje_Cliente`
@@ -250,9 +256,6 @@ CREATE TABLE IF NOT EXISTS `grupo02`.`Viaje` (
     CONSTRAINT `fk_Viaje_Arrastrado`
     FOREIGN KEY (`fk_Viaje_Arrastrado`)
     REFERENCES `grupo02`.`arrastrado` (`idArrastrado`),
-    CONSTRAINT `fk_Viaje_Costeo`
-    FOREIGN KEY (`fk_Viaje_Costeo`)
-    REFERENCES `grupo02`.`costeo` (`idCosteo`),
     CONSTRAINT `fk_Viaje_Carga`
     FOREIGN KEY (`fk_Viaje_Carga`)
     REFERENCES `grupo02`.`carga` (`idCarga`))

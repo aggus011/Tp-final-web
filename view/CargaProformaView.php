@@ -1,8 +1,10 @@
 {{> header}}
 <div style='margin-left:80px;margin-right: 15px;'>
     <br>
-        <h4>Datos cliente</h4>
-                <form  action='/CargaProforma/cargaProforma' enctype='multipart/form-data' method='post'>
+        
+                <form  action='/CargaProforma/cargaProforma' enctype='multipart/form-data' method='post' class="row">
+                <div class="col-4">
+                <h4>Datos cliente</h4>
                     <div class="grupo-login" >
                         <input type='text' name='nombreClienteProforma' id='nombreClienteProforma' autocomplete='off' required>
                         <label for='nombreClienteProforma'>Nombre</label>
@@ -81,6 +83,8 @@
                         <span class="input-bar"></span>
                         <small class="mensajeError" id="msjPaisProforma"></small>
                     </div>
+</div>
+                        <div class="col-4">
                     <h4>Direccion de Origen del Viaje</h4>
                 <div class="grupo-login">
                     <input type='text' name='calleViajeOrigen' id='calleViajeOrigen' autocomplete='off' required>
@@ -144,7 +148,8 @@
                     <span class="input-bar"></span>
                     <small class="mensajeError" id="msjPaisViajeDestino"></small>
                 </div>
-
+                </div>
+                <div class="col-4">
                 <h4>Carga del Viaje</h4>
                 <div class="grupo-login">
 
@@ -195,6 +200,7 @@
                     </span>
                     <input type='number' name='temperaturaReefer' placeholder="En caso afirmativo indique temperatura en celcius" autocomplete='off'>
                 </div>
+
                     <h4>Costeo estimado</h4>
                     <div>
                         <label style="font-size: 12px; color: #3a7bd5; ">Kilometros por recorrer</label><br>
@@ -202,9 +208,9 @@
                         <label style="font-size: 12px; color: #3a7bd5; ">Combustible estimado</label><br>
                         <input class="form-control"  type='number' name='combustiblesEstimado' placeholder="Combustible en litros estimados" autocomplete='off'><br>
                         <label style="font-size: 12px; color: #3a7bd5; ">ETD</label><br>
-                        <input class="form-control"  type='number' name='etd' placeholder="Tiempo estimado de salida (en horas)" autocomplete='off'><br>
+                        <input class="form-control"  type='datetime-local' name='etd' placeholder="Tiempo estimado de salida" autocomplete='off'><br>
                         <label style="font-size: 12px; color: #3a7bd5; ">ETA</label><br>
-                        <input class="form-control"  type='number' name='eta' placeholder="Tiempo estimado de llegada (en horas)" autocomplete='off'><br>
+                        <input class="form-control"  type='datetime-local' name='eta' placeholder="Tiempo estimado de llegada" autocomplete='off'><br>
                         <label style="font-size: 12px; color: #3a7bd5; ">Viaticos estimados</label><br>
                         <input class="form-control"  type='number' name='viaticoEstimado' placeholder="Costo viaticos estimados" autocomplete='off'><br>
                         <label style="font-size: 12px; color: #3a7bd5; ">Peajes y pasajes </label><br>
@@ -218,6 +224,7 @@
                     </div>
     <div class="grupo-login">
         <input type='submit' class="input-submit" id="inputRegister" value='Enviar' ></div>
+        </div>
                 </form>
 </div>
 

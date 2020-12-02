@@ -29,26 +29,26 @@ class CargaProformaController
         $data["localidadC"]=$localidadClienteProforma = $_POST["localidadProforma"];
         $data["provinciaC"]=$provinciaClienteProforma = $_POST["provinciaProforma"];
         $data["paisC"]=$paisClienteProforma = $_POST["paisProforma"];
-
+        //direccion origen
         $data["calleO"]=$calleViajeOrigen = $_POST["calleViajeOrigen"];
         $data["numeroO"]=$numeroViajeOrigen = $_POST["numeroViajeOrigen"];
         $data["localidadO"]=$localidadViajeOrigen = $_POST["localidadViajeOrigen"];
         $data["provinciaO"]=$provinciaViajeOrigen = $_POST["provinciaViajeOrigen"];
         $data["paisO"]=$paisViajeOrigen = $_POST["paisViajeOrigen"];
-
+        //direccion destino
         $data["calleD"]=$calleViajeDestino = $_POST["calleViajeDestino"];
         $data["numeroD"]=$numeroViajeDestino = $_POST["numeroViajeDestino"];
         $data["localidadD"]=$localidadViajeDestino = $_POST["localidadViajeDestino"];
         $data["provinciaD"]=$provinciaViajeDestino = $_POST["provinciaViajeDestino"];
         $data["paisD"]=$paisViajeDestino = $_POST["paisViajeDestino"];
-
+        //tipo de carga
         $data["tipoCarga"]=$tipoCarga =$_POST["tipoCarga"];
         $data["pesoCarga"]=$pesoCarga=$_POST["pesoCarga"];
         $data["hazard"]=$hazard=$_POST["hazard"];
         $data["claseHazar"]=$claseHazard=$_POST["claseHazard"];
         $data["reefer"]=$reefer=$_POST["reefer"];
         $data["temperaturaReefer"]=$temperaturaReefer=$_POST["temperaturaReefer"];
-
+        //costeo
         $data["kmE"]=$kilometrosEstimado=$_POST["kilometrosEstimado"];
         $data["combustibleE"]=$combustiblesEstimado=$_POST["combustiblesEstimado"];
         $data["etd"]=$etd=$_POST["etd"];
@@ -59,8 +59,13 @@ class CargaProformaController
         $data["costoHazarE"]=$hazardEstimado=$_POST["hazardEstimado"];
         $data["costoReeferE"]=$reeferEstimado=$_POST["reeferEstimado"];
 
-//        $idDireccion = $this->CargaProformaModel->insertaDireccionCliente($calleClienteProforma,$numeroClienteProforma,$localidadClienteProforma,$provinciaClienteProforma,$paisClienteProforma);
-//        $idCliente = $this->CargaProformaModel->insertaCliente($clienteNombre,$clienteApellido,$clienteDenominacion,$clienteCuit,$clienteTelefono,$clienteEmail,$clienteContacto1,$clienteContacto2,$idDireccion);
+        $idDireccionC = $this->CargaProformaModel->insertaDireccion($calleClienteProforma,$numeroClienteProforma,$localidadClienteProforma,$provinciaClienteProforma,$paisClienteProforma);
+        $idCliente = $this->CargaProformaModel->insertaCliente($clienteNombre,$clienteApellido,$clienteDenominacion,$clienteCuit,$clienteTelefono,$clienteEmail,$clienteContacto1,$clienteContacto2,$idDireccionC);
+        $idDireccionOrigen = $this->CargaProformaModel->insertaDireccion($calleViajeOrigen,$numeroViajeOrigen,$localidadViajeOrigen,$provinciaViajeOrigen,$paisViajeOrigen);
+        $idDireccionDestino = $this->CargaProformaModel->insertaDireccion($calleViajeDestino,$numeroViajeDestino,$localidadViajeDestino,$provinciaViajeDestino,$paisViajeDestino);
+        $idCarga = $this->CargaProformaModel->insertaCarga($tipoCarga,$pesoCarga,$hazard,$claseHazard,$reefer,$temperaturaReefer);
+        $idDatosEstimados = $this->CargaProformaModel->insertaDatosEstimados($kilometrosEstimado,$combustiblesEstimado,$etd,$eta,$viaticoEstimado,$peypaEstimado,$extrasEstimado,$hazardEstimado,$reeferEstimado);
+        $this->CargaProformaModel->insertaProformaViaje($idCliente,$idDatosEstimados,$idDireccionOrigen,$idDireccionDestino,$idCarga);
         echo $this->render->render("view/ProformaView.php",$data);
 
 
