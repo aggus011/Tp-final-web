@@ -7,6 +7,7 @@
 <div style="margin-left: 80px;">
 <h1>La proforma de {{nombre}} {{apellido}} <br>esta lista presione para ver/descargar pdf</h1>
 <form  action='/CargaProforma/imprimirProforma' enctype='multipart/form-data' method='post'>
+    <input type="hidden" value="{{idViajeCreado}}" name="idViajeCreado">
     <input type="hidden" value="{{nombre}}" name="nombre">
     <input type="hidden" value="{{apellido}}" name="apellido">
     <input type="hidden" value="{{denominacion}}" name="denominacion">

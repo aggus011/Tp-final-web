@@ -56,6 +56,10 @@ class CargaProformaModel{
         $this->database->queryInsert("INSERT INTO `viaje`(`fk_Viaje_Cliente`,`fk_Viaje_ViajeEstimado`,`fk_Viaje_Direccion_Origen`,`fk_Viaje_Direccion_Destino`,`fk_Viaje_Carga`)
         VALUES('$idCliente','$idDatosEstimados','$idDireccionOrigen','$idDireccionDestino','$idCarga')");
     }
+    public function devolverUltimoViajeCreado(){
+        return $this->database->query("select * from `grupo02`.`viaje` order by idViajeReal desc limit 1;");
+    }
+
 }
 
 ?>

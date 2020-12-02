@@ -66,6 +66,9 @@ class CargaProformaController
         $idCarga = $this->CargaProformaModel->insertaCarga($tipoCarga,$pesoCarga,$hazard,$claseHazard,$reefer,$temperaturaReefer);
         $idDatosEstimados = $this->CargaProformaModel->insertaDatosEstimados($kilometrosEstimado,$combustiblesEstimado,$etd,$eta,$viaticoEstimado,$peypaEstimado,$extrasEstimado,$hazardEstimado,$reeferEstimado);
         $this->CargaProformaModel->insertaProformaViaje($idCliente,$idDatosEstimados,$idDireccionOrigen,$idDireccionDestino,$idCarga);
+        /* manda datos del viaje creado en este caso la idViajeReal */
+        $viaje=$this->CargaProformaModel->devolverUltimoViajeCreado();
+        $data["idViajeCreado"]=$viaje[0]["idViajeReal"];
         echo $this->render->render("view/ProformaView.php",$data);
 
 
@@ -73,8 +76,10 @@ class CargaProformaController
     public function imprimirProforma(){
         /* cargamos variables de tal manera de no incluir texto en la creacion del pdf para evitar quilombos ....(nota posterior) al parecer no causaba tanto quilombo pero bueno*/
        /* cosas para el pdf */
-        $arial="Arial"; $b="b"; $direccion="fpdf.php"; $titulo="PROFORMA"; $c="c";$direccionImagen="../img/logoColor.png";
+        $arial="Arial"; $b="b"; $requirePdf="fpdf.php"; $direccionQr="../phpqrcode/qrlib.php"; $titulo="PROFORMA"; $c="c";$direccionImagen="../img/logoColor.png";
         /*  *****  */
+        $idViajeCreado = $_POST["idViajeCreado"];
+
         $nombre="Cliente:    ".$_POST["nombre"]." ".$_POST["apellido"];
         $denominacion="Denominacion:    ".$_POST["denominacion"];
         $cuit="Cuit:    ".$_POST["cuit"];
@@ -100,15 +105,33 @@ class CargaProformaController
         $extras="Gastos extras estimados: ".$_POST["extrasE"];
         $costo="Costo hazar estimado: ".$_POST["costoHazarE"]."      Costo reefer estimado: ".$_POST["costoReeferE"];
 
+        /* QR */
+        $requireQr="../phpqrcode/qrlib.php";
+
         unlink("public/pdf/crear.php"); /* borra el archivo si es que existe */
         $archivo=fopen("public/pdf/crear.php","w+b"); /* crea y abre el archivo */
         /* aca escribimos el archivo junto con el armamos el pdf utf8_decode para evitar problemas con tildes y otros */
+        $test="'test.png'";
+
+        $contenido="'localhost/actualizarViaje?idViaje=".$idViajeCreado."'";
+        $level="'m'";
         fwrite($archivo,'        
    <?php
-require("'.$direccion.'");
-     $pdf = new FPDF();
-    $pdf->AddPage();
-        
+require("'.$requirePdf.'");
+require("'.$requireQr.'");
+    
+    $dir ="temp/"; 
+     if (!file_exists($dir))
+       mkdir($dir);
+       
+    $filename = $dir.'.$test.';
+    $level='.$level.';
+    $contenido='.$contenido.';
+    $tamanio = 10;
+    $frameSize=3;
+    QRcode::png($contenido ,$filename,$level,$tamanio,$frameSize);
+    $pdf = new FPDF();
+    $pdf->AddPage();        
     $pdf->Image("'.$direccionImagen.'",175,5,30);
     $pdf->SetFont("'.$arial.'", "b", 16);
     $pdf->Cell(80);
@@ -138,6 +161,7 @@ require("'.$direccion.'");
     $pdf->Cell(100, 10,utf8_decode("'.$gastos.'"),0,1,"b",0);
     $pdf->Cell(100, 10,utf8_decode("'.$extras.'"),0,1,"b",0);
     $pdf->Cell(100, 10,utf8_decode("'.$costo.'"),0,1,"b",0);
+     $pdf->Image($filename,175,60,30);
     $pdf->Output();      
         ');
         header("Location:../public/pdf/crear.php");
