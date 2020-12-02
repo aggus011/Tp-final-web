@@ -9,12 +9,14 @@ include_once("model/registerModel.php");
 include_once("model/homeAdminModel.php");
 include_once("model/ABMUsuariosModel.php");
 include_once("model/CargaProformaModel.php");
+include_once("model/ABMUsuariosSuperModel.php");
 
 include_once("controller/LoginController.php");
 include_once("controller/RegisterController.php");
 include_once("controller/HomeAdminController.php");
 include_once("controller/ABMUsuariosController.php");
 include_once("controller/CargaProformaController.php");
+include_once("controller/ABMUsuariosSuperController.php");
 
 include_once('vendor/mustache/mustache/src/Mustache/Autoloader.php');
 include_once("Router.php");
@@ -96,5 +98,15 @@ class Configuration{
     public function getCargaProformaModel(){
         $database = $this->getDatabase();
         return new CargaProformaModel($database);
+    }
+
+    public function getABMUsuariosSuperController(){
+        $ABMUsuariosSuperModel = $this->getABMUsuariosSuperModel();
+        return new ABMUsuariosSuperController($ABMUsuariosSuperModel, $this->getRender());
+    }
+
+    public function getABMUsuariosSuperModel(){
+        $database = $this->getDatabase();
+        return new ABMUsuariosSuperModel($database);
     }
 }

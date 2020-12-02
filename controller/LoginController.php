@@ -35,24 +35,24 @@ class LoginController
                            case "supervisor":
                                $data["nombreRol"] = "el usuario ingresado es supervisor";
                                //cambiar home por supervisor.php
-                               echo $this->render->render("view/homeView.php", $data);
+                               echo $this->render->render("view/homeSuperView.php", $data);
                                break;
                            case "encargadoTaller":
                                $data["nombreRol"] = "el usuario ingresado es encargado de taller";
-                               echo $this->render->render("view/homeView.php", $data);
+                               echo $this->render->render("view/homeTallerView.php", $data);
                                break;
                            case "chofer":
                                $data["nombreRol"] = "el usuario ingresado es chofer";
-                               echo $this->render->render("view/homeView.php", $data);
+                               echo $this->render->render("view/homeChoferView.php", $data);
                                break;
                            default:
                                $data["nombreRol"] = "el usuario ingresado es sin rol";
-                               echo $this->render->render("view/homeView.php", $data);
+                               echo $this->render->render("view/homeSinRolView.php", $data);
                                break;
                        }
                    }else{
                        $data["nombreRol"] = "el usuario ingresado es sin rol";
-                       echo $this->render->render("view/homeView.php", $data);
+                       echo $this->render->render("view/homeSinRolView.php", $data);
                    }
                 }else{
                     $data["mensajeError"]="Usuario y/o contaseña invalida";
