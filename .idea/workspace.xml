@@ -19,50 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b30e037-85d7-4d6a-9d7f-267880532341" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/pdf/crear.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/font/courier.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/font/courierb.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/font/courierbi.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/font/courieri.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/font/helvetica.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/font/helveticab.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/font/helveticabi.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/font/helveticai.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/font/symbol.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/font/times.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/font/timesb.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/font/timesbi.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/font/timesi.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/font/zapfdingbats.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/fpdf.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/makefont/cp1250.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/makefont/cp1251.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/makefont/cp1252.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/makefont/cp1253.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/makefont/cp1254.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/makefont/cp1255.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/makefont/cp1257.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/makefont/cp1258.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/makefont/cp874.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/makefont/iso-8859-1.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/makefont/iso-8859-11.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/makefont/iso-8859-15.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/makefont/iso-8859-16.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/makefont/iso-8859-2.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/makefont/iso-8859-4.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/makefont/iso-8859-5.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/makefont/iso-8859-7.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/makefont/iso-8859-9.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/makefont/koi8-r.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/makefont/koi8-u.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/makefont/makefont.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/pdf/makefont/ttfparser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/ProformaView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/CargaProformaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/CargaProformaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/CargaProformaView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/CargaProformaView.php" afterDir="false" />
-    </list>
+    <list default="true" id="5b30e037-85d7-4d6a-9d7f-267880532341" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

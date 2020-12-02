@@ -1,4 +1,4 @@
-drop SCHEMA `grupo02`;
+drop SCHEMA if exists `grupo02`;
 CREATE SCHEMA IF NOT EXISTS `grupo02` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `grupo02` ;
 
@@ -278,7 +278,7 @@ INSERT INTO `grupo02`.`direccion`
 VALUES
 (0,
 'SIN DIRECCION',
-'SIN DIRECCION',
+null,
 'SIN DIRECCION',
 'SIN DIRECCION',
 'SIN DIRECCION');
