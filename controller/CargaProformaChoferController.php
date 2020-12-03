@@ -1,16 +1,16 @@
 <?php
-class CargaProformaController
+class CargaProformaChoferController
 {
-    private $CargaProformaModel;
+    private $CargaProformaChoferModel;
     private $render;
 
-    public function __construct($CargaProformaModel, $render){
-        $this->CargaProformaModel = $CargaProformaModel;
+    public function __construct($CargaProformaChoferModel, $render){
+        $this->CargaProformaChoferModel = $CargaProformaChoferModel;
         $this->render = $render;
     }
 
     public function execute(){
-        echo $this->render->render("view/CargaProformaView.php");
+        echo $this->render->render("view/CargaProformaChoferView.php");
     }
 
     public function cargaProforma(){

@@ -1,5 +1,5 @@
 <?php
-class CargaProformaModel{
+class CargaProformaSuperModel{
     private $database;
 
     public function __construct($database){

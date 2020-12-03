@@ -10,6 +10,12 @@ include_once("model/homeAdminModel.php");
 include_once("model/ABMUsuariosModel.php");
 include_once("model/CargaProformaModel.php");
 include_once("model/ABMUsuariosSuperModel.php");
+include_once("model/ABMClientesModel.php");
+include_once("model/HomeChoferModel.php");
+include_once("model/HomeSuperModel.php");
+include_once("model/HomeTallerModel.php");
+include_once("model/CargaProformaSuperModel.php");
+include_once("model/CargaProformaChoferModel.php");
 
 include_once("controller/LoginController.php");
 include_once("controller/RegisterController.php");
@@ -17,6 +23,12 @@ include_once("controller/HomeAdminController.php");
 include_once("controller/ABMUsuariosController.php");
 include_once("controller/CargaProformaController.php");
 include_once("controller/ABMUsuariosSuperController.php");
+include_once("controller/ABMClientesController.php");
+include_once("controller/HomeChoferController.php");
+include_once("controller/HomeSuperController.php");
+include_once("controller/HomeTallerController.php");
+include_once("controller/CargaProformaSuperController.php");
+include_once("controller/CargaProformaChoferController.php");
 
 include_once('vendor/mustache/mustache/src/Mustache/Autoloader.php');
 include_once("Router.php");
@@ -108,5 +120,65 @@ class Configuration{
     public function getABMUsuariosSuperModel(){
         $database = $this->getDatabase();
         return new ABMUsuariosSuperModel($database);
+    }
+
+    public function getABMClientesController(){
+        $ABMClientesModel = $this->getABMClientesModel();
+        return new ABMClientesController($ABMClientesModel, $this->getRender());
+    }
+
+    public function getABMClientesModel(){
+        $database = $this->getDatabase();
+        return new ABMClientesModel($database);
+    }
+
+    public function getHomeChoferController(){
+        $homeChoferModel = $this->getHomeChoferModel();
+        return new HomeChoferController($homeChoferModel, $this->getRender());
+    }
+
+    public function getHomeChoferModel(){
+        $database = $this->getDatabase();
+        return new HomeChoferModel($database);
+    }
+
+    public function getHomeSuperController(){
+        $homeSuperModel = $this->getHomeSuperModel();
+        return new HomeSuperController($homeSuperModel, $this->getRender());
+    }
+
+    public function getHomeSuperModel(){
+        $database = $this->getDatabase();
+        return new HomeSuperModel($database);
+    }
+
+    public function getCargaProformaSuperController(){
+        $CargaProformaSuperModel = $this->getCargaProformaSuperModel();
+        return new CargaProformaSuperController($CargaProformaSuperModel, $this->getRender());
+    }
+
+    public function getCargaProformaSuperModel(){
+        $database = $this->getDatabase();
+        return new CargaProformaSuperModel($database);
+    }
+
+    public function getCargaProformaChoferController(){
+        $CargaProformaChoferModel = $this->getCargaProformaChoferModel();
+        return new CargaProformaChoferController($CargaProformaChoferModel, $this->getRender());
+    }
+
+    public function getCargaProformaChoferModel(){
+        $database = $this->getDatabase();
+        return new CargaProformaChoferModel($database);
+    }
+
+    public function getHomeTallerController(){
+        $homeTallerModel = $this->getHomeTallerModel();
+        return new HomeTallerController($homeTallerModel, $this->getRender());
+    }
+
+    public function getHomeTallerModel(){
+        $database = $this->getDatabase();
+        return new HomeTallerModel($database);
     }
 }

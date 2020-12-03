@@ -10,6 +10,4 @@ class HomeAdminModel{
         $this->database->queryInsert("UPDATE `usuario` SET `estado` = 1 WHERE `nombreUsuario` = '$nombreUsuario'");
     }
 
-    
-
 }

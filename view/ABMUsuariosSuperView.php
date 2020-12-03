@@ -1,4 +1,4 @@
-{{> header}}
+{{> headerSuper}}
 <link rel="stylesheet" href="../public/css/tablaUsuarios.css">
 <section class="contenedor-login" style="margin-left: 70px">
 <section>
@@ -29,7 +29,6 @@
           <td>{{nombreUsuario}}</td>
           <td>{{role}}</td>
           <td>{{estado}}</td>
-           
         </tr>
 {{/usuarios}}
       </tbody>
