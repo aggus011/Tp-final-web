@@ -9,7 +9,7 @@ require("../phpqrcode/qrlib.php");
        
     $filename = $dir.'test.png';
     $level='m';
-    $contenido='localhost/actualizarViaje?idViaje=45';
+    $contenido='localhost/ActualizarProforma/choferConProforma?idViaje=54';
     $tamanio = 10;
     $frameSize=3;
     QRcode::png($contenido ,$filename,$level,$tamanio,$frameSize);

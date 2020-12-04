@@ -113,7 +113,7 @@ class CargaProformaController
         /* aca escribimos el archivo junto con el armamos el pdf utf8_decode para evitar problemas con tildes y otros */
         $test="'test.png'";
 
-        $contenido="'localhost/actualizarViaje?idViaje=".$idViajeCreado."'";
+        $contenido="'localhost/ActualizarProforma/choferConProforma?idViaje=".$idViajeCreado."'";
         $level="'m'";
         fwrite($archivo,'        
    <?php
@@ -170,10 +170,3 @@ require("'.$requireQr.'");
 
 }
 ?>
-
-
-        <!-- $estadoElegido = $_POST["estado"];
-        $nombreUsuario= $_POST["nick"];
-        $this->ABMUsuariosModel->modificarEstadoDeUsuario($nombreUsuario,$estadoElegido);
-        header("Location:/ABMUsuarios");
-        exit(); -->
