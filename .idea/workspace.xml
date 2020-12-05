@@ -19,7 +19,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b30e037-85d7-4d6a-9d7f-267880532341" name="Default Changelist" comment="" />
+    <list default="true" id="5b30e037-85d7-4d6a-9d7f-267880532341" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/controller/ActualizarProformaController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/ActualizarProformaView.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/loginConQr.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/CargaProformaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/CargaProformaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helper/Config.php" beforeDir="false" afterPath="$PROJECT_DIR$/helper/Config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pdf/crear.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/pdf/crear.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pdf/temp/test.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/pdf/temp/test.png" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -97,6 +107,8 @@
       <workItem from="1605450957107" duration="5067000" />
       <workItem from="1606090893200" duration="1546000" />
       <workItem from="1606139198705" duration="11078000" />
+      <workItem from="1606923082797" duration="16893000" />
+      <workItem from="1607020473914" duration="14253000" />
     </task>
     <task id="LOCAL-00001" summary="cambie los directorios">
       <created>1604443927197</created>
@@ -140,25 +152,26 @@
       <screen x="0" y="0" width="1676" height="902" />
     </state>
     <state x="564" y="146" key="FileChooserDialogImpl/0.0.1676.902@0.0.1676.902" timestamp="1604628432485" />
-    <state x="787" y="243" key="NewPhpClassDialog" timestamp="1604324658830">
+    <state x="787" y="243" key="NewPhpClassDialog" timestamp="1606944865161">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="787" y="243" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606944865161" />
     <state x="787" y="243" key="NewPhpClassDialog/1920.34.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1604324658830" />
-    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1606772333193">
+    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1607038872304">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="693" y="384" key="NewPhpFileDialog/0.0.1676.902@0.0.1676.902" timestamp="1604543272378" />
-    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606772333193" />
+    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607038872304" />
     <state x="794" y="443" key="NewPhpFileDialog/1920.34.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1604329832822" />
     <state x="262" y="10" key="SettingsEditor" timestamp="1606761135848">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="229" y="9" key="SettingsEditor/0.0.1676.902@0.0.1676.902" timestamp="1604544056803" />
     <state x="262" y="10" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606761135848" />
-    <state x="36" y="200" width="1486" height="660" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1606775746779">
+    <state x="121" y="134" width="1637" height="663" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1607027622244">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="36" y="200" width="1486" height="660" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606775746779" />
+    <state x="121" y="134" width="1637" height="663" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607027622244" />
     <state x="549" y="80" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1606791804667">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -167,10 +180,14 @@
       <screen x="0" y="0" width="1676" height="902" />
     </state>
     <state x="483" y="118" width="708" height="664" key="find.popup/0.0.1676.902@0.0.1676.902" timestamp="1604617298162" />
-    <state x="616" y="282" width="963" height="913" key="search.everywhere.popup" timestamp="1606769987562">
+    <state x="678" y="231" key="run.anything.popup" timestamp="1607027796727">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="678" y="231" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607027796727" />
+    <state x="616" y="282" width="672" height="160" key="search.everywhere.popup" timestamp="1607039542543">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="416" y="0" width="840" height="1034" key="search.everywhere.popup/0.0.1676.902@0.0.1676.902" timestamp="1604630765549" />
-    <state x="616" y="282" width="963" height="913" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1606769987562" />
+    <state x="616" y="282" width="672" height="160" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607039542543" />
   </component>
 </project>

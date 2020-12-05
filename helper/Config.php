@@ -23,6 +23,7 @@ include_once("controller/HomeAdminController.php");
 include_once("controller/ABMUsuariosController.php");
 include_once("controller/CargaProformaController.php");
 include_once("controller/ABMUsuariosSuperController.php");
+include_once("controller/ActualizarProformaController.php");
 include_once("controller/ABMClientesController.php");
 include_once("controller/HomeChoferController.php");
 include_once("controller/HomeSuperController.php");
@@ -110,6 +111,11 @@ class Configuration{
     public function getCargaProformaModel(){
         $database = $this->getDatabase();
         return new CargaProformaModel($database);
+    }
+    public function getActualizarProformaController(){
+        $loginModel = $this->getLoginModel();
+        $CargaProformaModel = $this->getCargaProformaModel();
+        return new ActualizarProformaController($loginModel,$CargaProformaModel, $this->getRender());
     }
 
     public function getABMUsuariosSuperController(){
