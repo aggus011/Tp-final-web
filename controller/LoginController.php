@@ -26,6 +26,9 @@ class LoginController
                     $rol= $this->loginModel->traerRolPorNumeroFk($usuario[0]['fk_Usuario_Role']);
                     // aca estaria la separacion por rol una vez logeado pregunta el rol y lo dirige al .php de ese rol
                    if (isset($rol[0]["nombre"])) {
+                       //agrego el rol del usuario ingresado a la sesion
+                       $_SESSION["rolLogeado"]=$rol[0]["nombre"];
+                       //lo dirige a la pagina del rol logeado
                        switch ($rol[0]["nombre"]) {
                            case "admin":
                                $data["nombreRol"] = "el usuario ingresado es admin";
@@ -66,5 +69,11 @@ class LoginController
         $params = array('errorMessage' => $message);
         echo $this->render->render("view/loginView.php", $params);
     }
+
+    public function logout(){
+        session_destroy();
+        echo $this->render->render("view/loginView.php");
+    }
+
 }
 ?>

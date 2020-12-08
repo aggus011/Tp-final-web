@@ -10,7 +10,12 @@ class HomeChoferController
     }
 
     public function execute(){
-        echo $this->render->render("view/homeChoferView.php");
+        if ($_SESSION["rolLogeado"] == "chofer") {
+            echo $this->render->render("view/homeChoferView.php");
+        } else {
+            echo "Usuario no es chofer";
+        }
+
     }
 }
 ?>

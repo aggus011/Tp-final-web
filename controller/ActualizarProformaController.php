@@ -27,7 +27,7 @@ class ActualizarProformaController
         $usuario =$this->loginModel->traerUsuarioLogeado($nombre, $password);
         if($usuario) {
             $rol = $this->loginModel->traerRolPorNumeroFk($usuario[0]['fk_Usuario_Role']);
-            if($rol="chofer"){
+            if( $rol[0]["nombre"] =="chofer"){
                 $data["idViaje"]=$idViaje;
                 echo $this->render->render("view/ActualizarProformaView.php",$data);
             }else{

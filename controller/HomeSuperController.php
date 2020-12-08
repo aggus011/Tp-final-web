@@ -10,7 +10,12 @@ class HomeSuperController
     }
 
     public function execute(){
-        echo $this->render->render("view/homeSuperView.php");
+        if ($_SESSION["rolLogeado"] == "supervisor") {
+            echo $this->render->render("view/homeSuperView.php");
+        } else {
+            echo "Usuario no es supervisor";
+        }
+
     }
 }
 ?>

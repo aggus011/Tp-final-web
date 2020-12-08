@@ -10,7 +10,12 @@ class CargaProformaSuperController
     }
 
     public function execute(){
-        echo $this->render->render("view/CargaProformaSuperView.php");
+        if ($_SESSION["rolLogeado"] == "supervisor") {
+            echo $this->render->render("view/CargaProformaSuperView.php");
+        } else {
+            echo "Usuario no es supervisor";
+        }
+
     }
 
     public function cargaProforma(){

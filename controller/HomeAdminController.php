@@ -10,8 +10,12 @@ class HomeAdminController
     }
 
     public function execute(){
-        
-        echo $this->render->render("view/homeAdminView.php");
+        if ($_SESSION["rolLogeado"] == "admin") {
+            echo $this->render->render("view/homeAdminView.php");
+        } else {
+            echo "Usuario no es admin";
+        }
+
     }
 
     public function darAlta(){

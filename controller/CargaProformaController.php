@@ -10,7 +10,12 @@ class CargaProformaController
     }
 
     public function execute(){
-        echo $this->render->render("view/CargaProformaView.php");
+        if ($_SESSION["rolLogeado"] == "admin") {
+            echo $this->render->render("view/CargaProformaView.php");
+        } else {
+            echo "Usuario no es admin";
+        }
+
     }
 
     public function cargaProforma(){

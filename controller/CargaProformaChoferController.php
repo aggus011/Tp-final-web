@@ -10,7 +10,12 @@ class CargaProformaChoferController
     }
 
     public function execute(){
-        echo $this->render->render("view/CargaProformaChoferView.php");
+        if ($_SESSION["rolLogeado"] == "chofer") {
+            echo $this->render->render("view/CargaProformaChoferView.php");
+        } else {
+            echo "Usuario no es chofer";
+        }
+
     }
 
     public function cargaProforma(){

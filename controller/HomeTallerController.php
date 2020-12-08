@@ -10,7 +10,12 @@ class HomeTallerController
     }
 
     public function execute(){
-        echo $this->render->render("view/homeTallerView.php");
+        if ($_SESSION["rolLogeado"] == "encargadoTaller") {
+            echo $this->render->render("view/homeTallerView.php");
+        } else {
+            echo "Usuario no es encargado";
+        }
+
     }
 }
 ?>

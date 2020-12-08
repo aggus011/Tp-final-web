@@ -10,7 +10,12 @@ class ABMClientesController
     }
 
     public function execute(){
-        echo $this->render->render("view/ABMClientesView.php");
+        if ($_SESSION["rolLogeado"] == "supervisor") {
+            echo $this->render->render("view/ABMClientesView.php");
+        } else {
+            echo "Usuario no es supervisor";
+        }
+
     }
 
     public function InsertaCliente(){
