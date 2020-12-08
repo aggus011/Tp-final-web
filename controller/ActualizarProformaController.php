@@ -43,7 +43,64 @@ class ActualizarProformaController
         //logica y esas weas
         //echo $_POST["idViaje"]."<br>".$_POST["latitud"]."<br>".$_POST["longitud"];
         $data["idViaje"]=$_POST["idViaje"];
+        $_POST["latitud"];
+        $_POST["longitud"];
         echo $this->render->render("view/ActualizarProformaView.php",$data);
     }
+    public function actualizarKilometros(){
+        //logica y esas weas
+        $data["idViaje"]=$_POST["idViaje"];
+        $_POST["actualizarKilometros"];
+        echo $this->render->render("view/ActualizarProformaView.php",$data);
+    }
+
+    public function actualizarCombustible(){
+        //logica y esas weas
+        $data["idViaje"]=$_POST["idViaje"];
+        $_POST["actualizarCombustible"];
+        echo $this->render->render("view/ActualizarProformaView.php",$data);
+    }
+    public function actualizarEtd(){
+        //logica y esas weas
+        $data["idViaje"]=$_POST["idViaje"];
+        $_POST["actualizarEtd"];
+        echo $this->render->render("view/ActualizarProformaView.php",$data);
+    }
+    public function actualizarEta(){
+        //logica y esas weas
+        $data["idViaje"]=$_POST["idViaje"];
+        $_POST["actualizarEta"];
+        echo $this->render->render("view/ActualizarProformaView.php",$data);
+    }
+    public function actualizarViaticos(){
+        //logica y esas weas
+        $data["idViaje"]=$_POST["idViaje"];
+        $_POST["actualizarViaticos"];
+        echo $this->render->render("view/ActualizarProformaView.php",$data);
+    }
+    public function actualizarPeajePasaje(){
+        $data["idViaje"]=$_POST["idViaje"];
+        $_POST["actualizarPeajePasaje"];
+        echo $this->render->render("view/ActualizarProformaView.php",$data);
+        }
+    public function actualizarExtras(){
+        //logica y esas weas
+        $data["idViaje"]=$_POST["idViaje"];
+        $_POST["actualizarExtras"];
+        echo $this->render->render("view/ActualizarProformaView.php",$data);
+    }
+    public function actualizarHazard(){
+        //logica y esas weas
+        $data["idViaje"]=$_POST["idViaje"];
+        $_POST["actualizarHazard"];
+        echo $this->render->render("view/ActualizarProformaView.php",$data);
+    }
+    public function actualizarReefer(){
+        //logica y esas weas
+        $data["idViaje"]=$_POST["idViaje"];
+        $_POST["actualizarReefer"];
+        echo $this->render->render("view/ActualizarProformaView.php",$data);
+    }
+
 
 }

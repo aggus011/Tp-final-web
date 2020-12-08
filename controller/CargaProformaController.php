@@ -76,10 +76,10 @@ class CargaProformaController
     public function imprimirProforma(){
         /* cargamos variables de tal manera de no incluir texto en la creacion del pdf para evitar quilombos ....(nota posterior) al parecer no causaba tanto quilombo pero bueno*/
        /* cosas para el pdf */
-        $arial="Arial"; $b="b"; $requirePdf="fpdf.php"; $direccionQr="../phpqrcode/qrlib.php"; $titulo="PROFORMA"; $c="c";$direccionImagen="../img/logoColor.png";
+        $arial="Arial"; $b="b"; $requirePdf="fpdf.php"; $direccionQr="../phpqrcode/qrlib.php";  $c="c";$direccionImagen="../img/logoColor.png";
         /*  *****  */
         $idViajeCreado = $_POST["idViajeCreado"];
-
+        $titulo="PROFORMA N° ".$idViajeCreado;
         $nombre="Cliente:    ".$_POST["nombre"]." ".$_POST["apellido"];
         $denominacion="Denominacion:    ".$_POST["denominacion"];
         $cuit="Cuit:    ".$_POST["cuit"];
