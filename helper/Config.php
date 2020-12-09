@@ -16,6 +16,7 @@ include_once("model/HomeSuperModel.php");
 include_once("model/HomeTallerModel.php");
 include_once("model/CargaProformaSuperModel.php");
 include_once("model/CargaProformaChoferModel.php");
+include_once("model/ActualizarProformaModel.php");
 
 include_once("controller/LoginController.php");
 include_once("controller/RegisterController.php");
@@ -30,6 +31,7 @@ include_once("controller/HomeSuperController.php");
 include_once("controller/HomeTallerController.php");
 include_once("controller/CargaProformaSuperController.php");
 include_once("controller/CargaProformaChoferController.php");
+include_once("controller/ActualizarProformaController.php");
 
 include_once('vendor/mustache/mustache/src/Mustache/Autoloader.php');
 include_once("Router.php");
@@ -112,10 +114,15 @@ class Configuration{
         $database = $this->getDatabase();
         return new CargaProformaModel($database);
     }
+    public function getActualizarProformaModel(){
+        $database = $this->getDatabase();
+        return new ActualizarProformaModel($database);
+    }
     public function getActualizarProformaController(){
         $loginModel = $this->getLoginModel();
         $CargaProformaModel = $this->getCargaProformaModel();
-        return new ActualizarProformaController($loginModel,$CargaProformaModel, $this->getRender());
+        $ActualizarProformaModel = $this->getActualizarProformaModel();
+        return new ActualizarProformaController($loginModel,$CargaProformaModel,$ActualizarProformaModel, $this->getRender());
     }
 
     public function getABMUsuariosSuperController(){
