@@ -1,4 +1,4 @@
-drop SCHEMA if exists `grupo02`;
+drop SCHEMA `grupo02`;
 CREATE SCHEMA IF NOT EXISTS `grupo02` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `grupo02` ;
 
@@ -128,7 +128,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `grupo02`.`DatosReal` (
   `idDatosReal` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `kilometrosReal` INT NULL,
-  `fk_DatosReal_Combustible` INT UNSIGNED NOT NULL,
+  `combustible` INT UNSIGNED NOT NULL,
   `ETD` DATETIME NULL,
   `ETA` DATETIME NULL,
   `viatico` DOUBLE NOT NULL,
@@ -136,10 +136,7 @@ CREATE TABLE IF NOT EXISTS `grupo02`.`DatosReal` (
   `extras` VARCHAR(100),
   `hazard` VARCHAR(100),
   `reefer` VARCHAR (100),
-  PRIMARY KEY (`idDatosReal`),
-  CONSTRAINT `fk_DatosReal_Combustible`
-    FOREIGN KEY (`fk_DatosReal_Combustible`)
-    REFERENCES `grupo02`.`Combustible` (`idCombustible`))
+  PRIMARY KEY (`idDatosReal`))
 ENGINE = InnoDB;
 
 CREATE TABLE IF NOT EXISTS `grupo02`.`DatosEstimados` (
@@ -278,8 +275,57 @@ INSERT INTO `grupo02`.`direccion`
 VALUES
 (0,
 'SIN DIRECCION',
-null,
+'SIN DIRECCION',
 'SIN DIRECCION',
 'SIN DIRECCION',
 'SIN DIRECCION');
 
+INSERT INTO `grupo02`.`usuario`
+(
+`nombre`,
+`apellido`,
+`documento`,
+`telefono`,
+`email`,
+`nombreUsuario`,
+`password`,
+`estado`,
+`fk_Usuario_Role`,
+`fk_Usuario_Direccion`)
+VALUES
+(
+'admin',
+'admin',
+123,
+123,
+'admin',
+'admin',
+'admin',
+1,
+2,
+1);
+
+INSERT INTO `grupo02`.`usuario`
+(
+`nombre`,
+`apellido`,
+`documento`,
+`telefono`,
+`email`,
+`nombreUsuario`,
+`password`,
+`estado`,
+`fk_Usuario_Role`,
+`fk_Usuario_Direccion`)
+VALUES
+(
+'chofer',
+'chofer',
+123,
+123,
+'chofer',
+'chofer',
+'chofer',
+1,
+1,
+1);
