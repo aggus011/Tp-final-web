@@ -12,7 +12,7 @@ class ActualizarProformaModel{
     public function insertar($kilometros,$combustible,$ETD,$ETA,$viaticos,$PeajePasaje,$extras,$Hazard,$Reefer){
 
         $this->database->queryInsert("INSERT INTO `grupo02`.`datosreal`(`kilometrosReal`,`combustible`,`ETD`,`ETA`,`viatico`,`peaje_pasaje`,`extras`,`hazard`,`reefer`)VALUES
-        ($kilometros,$combustible,$ETD,$ETA,$viaticos,$PeajePasaje,$extras,$Hazard,$Reefer)");
+        ('$kilometros','$combustible','$ETD','$ETA','$viaticos','$PeajePasaje','$extras','$Hazard','$Reefer')");
         $idDatosReal= $this->database->query("SELECT idDatosReal FROM datosreal WHERE `kilometrosReal` = '$kilometros'
                                                                         AND `combustible` = '$combustible'
                                                                         AND `ETD` = '$ETD'
@@ -27,8 +27,8 @@ class ActualizarProformaModel{
 
     public function actualizarViaje($idDatosReales, $idViaje){
         $this->database->execute("UPDATE `grupo02`.`viaje` SET
-        `idViajeReal` = $idDatosReal
-        WHERE `idViajeReal` = $idViaje");
+        `idViajeReal` = '$idDatosReales'
+        WHERE `idViajeReal` = '$idViaje'");
     }
     
 }

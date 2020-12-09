@@ -21,19 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="5b30e037-85d7-4d6a-9d7f-267880532341" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/ABMClientesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ABMClientesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/ABMUsuariosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ABMUsuariosController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/ABMUsuariosSuperController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ABMUsuariosSuperController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Script DB 3.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Script DB 3.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/ActualizarProformaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ActualizarProformaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/CargaProformaChoferController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/CargaProformaChoferController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/CargaProformaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/CargaProformaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/CargaProformaSuperController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/CargaProformaSuperController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/HomeAdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/HomeAdminController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/HomeChoferController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/HomeChoferController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/HomeSuperController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/HomeSuperController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/HomeTallerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/HomeTallerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/partial/header.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/view/partial/header.mustache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/ActualizarProformaModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/ActualizarProformaModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pdf/crear.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/pdf/crear.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
