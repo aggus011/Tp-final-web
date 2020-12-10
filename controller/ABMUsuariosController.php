@@ -32,6 +32,16 @@ class ABMUsuariosController
         header("Location:/ABMUsuarios");
         exit();
     }
+    public function darBaja(){
+        $nombreUsuario = isset($_POST['nombreUsuario']) ? $_POST['nombreUsuario'] : "";
+        if($nombreUsuario != ""){
+            $this->ABMUsuariosModel->darBaja($nombreUsuario);
+            header("Location:/ABMUsuarios");
+        }
+        else{
+            echo $this->render->render("view/registerView.php");
+        }
+    }
 
 
 }
