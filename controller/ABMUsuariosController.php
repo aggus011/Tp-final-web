@@ -18,5 +18,21 @@ class ABMUsuariosController
         }
     }
 
+    public function modificarRol(){
+        $rolElegido = $_POST["rol"];
+        $nombreUsuario= $_POST["nick"];
+        $this->ABMUsuariosModel->modificarRolDeUsuario($nombreUsuario,$rolElegido);
+        header("Location:/ABMUsuarios");
+        exit();
+    }
+    public function modificarEstado(){
+        $estadoElegido = $_POST["estado"];
+        $nombreUsuario= $_POST["nick"];
+        $this->ABMUsuariosModel->modificarEstadoDeUsuario($nombreUsuario,$estadoElegido);
+        header("Location:/ABMUsuarios");
+        exit();
+    }
+
+
 }
 ?>

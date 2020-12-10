@@ -310,7 +310,7 @@ VALUES
 'admin',
 1,
 2,
-0);
+1);
 
 INSERT INTO `grupo02`.`usuario`
 (
@@ -335,7 +335,7 @@ VALUES
 'chofer',
 1,
 1,
-0);
+1);
 INSERT INTO `grupo02`.`usuario`
 (
 `nombre`,
@@ -359,4 +359,4 @@ VALUES
 'super',
 1,
 3,
-0);
+1);

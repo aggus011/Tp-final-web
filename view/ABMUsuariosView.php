@@ -47,7 +47,7 @@
                             <!-- Modal body -->
                             <div class='modal-body'>
                                 <h5>Modificando a {{nombreUsuario}}</h5>
-                                <form  action='ABMUsuarios/modificarRol' enctype='multipart/form-data' method='post'>
+                                <form  action='/ABMUsuarios/modificarRol' enctype='multipart/form-data' method='post'>
                                     <input type="hidden" name="nick" value="{{nombreUsuario}}">
                                     <label>Modificar rol</label>
                                     <select class='form-control  mt-2' name="rol" required>
@@ -60,7 +60,7 @@
                                     </select>
                                     <input class='btn btn-info ml-1 text-center mt-2' type='submit' value='Modificar rol'>
                                 </form><br>
-                                <form  action='ABMUsuarios/modificarEstado' enctype='multipart/form-data' method='post'>
+                                <form  action='/ABMUsuarios/modificarEstado' enctype='multipart/form-data' method='post'>
                                     <input type="hidden" name="nick" value="{{nombreUsuario}}">
                                     <label>Modificar estado</label>
                                     <select class='form-control  mt-2' name="estado" required>
