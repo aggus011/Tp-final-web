@@ -46,8 +46,7 @@ class ActualizarProformaController
         //logica y esas weas
         //echo $_POST["idViaje"]."<br>".$_POST["latitud"]."<br>".$_POST["longitud"];
         $data["idViaje"]=$_POST["idViaje"];
-        $_POST["latitud"];
-        $_POST["longitud"];
+        $this->ActualizarProformaModel->actualizarUbicacionDeViaje($_POST["idViaje"],$_POST["latitud"],$_POST["longitud"]);
         echo $this->render->render("view/ActualizarProformaView.php",$data);
     }
     public function insertar(){
@@ -62,7 +61,7 @@ class ActualizarProformaController
         $Reefer = $_POST["actualizarReefer"];
         $idDatosReales = $this->ActualizarProformaModel->insertar($kilometros,$combustible,$ETD,$ETA,$viaticos,$PeajePasaje,$extras,$Hazard,$Reefer);
         $this->ActualizarProformaModel->actualizarViaje($idDatosReales, $_POST["idViaje"]);
-        echo $this->render->render("view/ActualizarProformaView.php");
+        echo $this->render->render("view/finViajeView.php");
     }
 
 

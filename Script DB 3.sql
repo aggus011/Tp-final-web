@@ -14,6 +14,13 @@ CREATE TABLE IF NOT EXISTS `grupo02`.`Combustible` (
   `costo` DECIMAL(7,2) NULL,
   PRIMARY KEY (`idCombustible`))
 ENGINE = InnoDB;
+CREATE TABLE IF NOT EXISTS `grupo02`.`Ubicaciones` (
+  `idUbicacion` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `idViaje` INT NULL,
+  `latitud` varchar(250) null ,
+  `longitud` varchar(250) null ,
+  PRIMARY KEY (`idUbicacion`))
+ENGINE = InnoDB;
 
 CREATE TABLE IF NOT EXISTS `grupo02`.`Alarma` (
   `idAlarma` INT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -328,4 +335,28 @@ VALUES
 'chofer',
 1,
 1,
+1);
+INSERT INTO `grupo02`.`usuario`
+(
+`nombre`,
+`apellido`,
+`documento`,
+`telefono`,
+`email`,
+`nombreUsuario`,
+`password`,
+`estado`,
+`fk_Usuario_Role`,
+`fk_Usuario_Direccion`)
+VALUES
+(
+'super',
+'super',
+123,
+123,
+'super',
+'super',
+'super',
+1,
+3,
 1);

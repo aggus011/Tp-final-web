@@ -9,6 +9,21 @@ class ActualizarProformaModel{
     //     return $this->database->query("SELECT u.*, r.nombre as role FROM `grupo02`.`usuario` u inner join `grupo02`.`role` r on u.fk_Usuario_role = r.idRole ;");
     // }
 
+    public function actualizarUbicacionDeViaje($idViaje,$latitud,$longitud){
+        $this->database->queryInsert("INSERT INTO `grupo02`.`ubicaciones`
+(
+`idViaje`,
+`latitud`,
+`longitud`)
+VALUES
+(
+'$idViaje',
+'$latitud',
+'$longitud');
+");
+    }
+
+
     public function insertar($kilometros,$combustible,$ETD,$ETA,$viaticos,$PeajePasaje,$extras,$Hazard,$Reefer){
 
         $this->database->queryInsert("INSERT INTO `grupo02`.`datosreal`(`kilometrosReal`,`combustible`,`ETD`,`ETA`,`viatico`,`peaje_pasaje`,`extras`,`hazard`,`reefer`)VALUES

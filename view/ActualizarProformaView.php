@@ -36,7 +36,7 @@
 
 
     <button type="button" class="mr-5 ml-5 mt-3 btn btn-light text-primary" data-toggle="modal" data-target="#ubicacion">
-        Actualizar ubicacion
+        Indicar ubicacion
     </button>
     <!-- The Modal -->
     <div class="modal text-primary" id="ubicacion">
@@ -45,7 +45,7 @@
 
                 <!-- Modal Header -->
                 <div class="modal-header">
-                    <h4 class="modal-title">Actualizando ubicacion</h4>
+                    <h4 class="modal-title">Indicando ubicacion</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
 
@@ -125,6 +125,7 @@
     <input class="form-control" type="number" name="actualizarHazard" placeholder="Ingrese precio total de hazard" required>
     <label for='actualizarReefer'>Ingrese precio total de reefer</label>
     <input class="form-control" type="number" name="actualizarReefer" placeholder="Ingrese precio total de reefer" required>
+    <div class="rounded bg-danger  mt-3"><p class="text-center">ACTUALIZAR SOLO SI TERMINO EL VIAJE</p></div>
     <input class='form-control mt-3 btn btn-primary text-light font-weight-bold' type='submit' value='ENVIAR DATOS'>
 </form>
 </div>
