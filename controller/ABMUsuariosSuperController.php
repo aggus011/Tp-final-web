@@ -11,8 +11,8 @@ class ABMUsuariosSuperController
 
     public function execute(){
         $data["usuarios"] = $this->ABMUsuariosSuperModel->traerUsuarios();
-        if ($_SESSION["rolLogeado"] == "super") {
-            echo $this->render->render("view/ABMUsuariosView.php", $data);
+        if ($_SESSION["rolLogeado"] == "supervisor") {
+            echo $this->render->render("view/ABMUsuariosSuperView.php", $data);
         } else {
             echo "Usuario no es super";
         }

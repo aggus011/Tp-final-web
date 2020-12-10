@@ -19,9 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b30e037-85d7-4d6a-9d7f-267880532341" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/config/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.ini" afterDir="false" />
-    </list>
+    <list default="true" id="5b30e037-85d7-4d6a-9d7f-267880532341" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,7 +101,7 @@
       <workItem from="1607020473914" duration="14253000" />
       <workItem from="1607382517092" duration="4225000" />
       <workItem from="1607456435562" duration="10351000" />
-      <workItem from="1607605863068" duration="6774000" />
+      <workItem from="1607605863068" duration="7078000" />
     </task>
     <task id="LOCAL-00001" summary="cambie los directorios">
       <created>1604443927197</created>
