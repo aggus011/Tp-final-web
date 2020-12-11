@@ -173,32 +173,45 @@
 
 
                 </div>
+                    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+                    <script type="text/javascript">
+                        function mostrar(id) {
+                            if (id == "si hazard") {
+                                $("#eligioHazard").show();
+                            }if(id == "no hazard") {
+                                $("#eligioHazard").hide();
+                            }
+                            if (id == "si reefer") {
+                                $("#eligioReefer").show();
+                            }if (id == "no reefer"){
+                                $("#eligioReefer").hide();
+                            }
+
+                        }
+                    </script>
+
+
                 <div class="grupo-login">
                     <label style=" top: -20px; left: -5px; font-size: 12px; color: #3a7bd5; ">Hazard</label><br>
-                    <span>
-                        <input type="radio" name="hazard" value="si"> si
-                        <input type="radio" name="hazard" value="no"checked> no
-                    </span>
-                    <select class="form-control" name="claseHazard">
-                        <option value="">En caso afirmativo elija N° de clase</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                        <option>6</option>
-                        <option>7</option>
-                        <option>8</option>
-                        <option>9</option>
-                    </select>
+                    <select class="form-control" id="hazar" name="hazard" autocomplete='off' onChange="mostrar(this.value);">
+                        <option selected value="no hazard">No</option>
+                        <option value="si hazard">Si</option>
+                    </select><br>
+                    <div id="eligioHazard" style="display: none;">
+                        Elija n° clase
+                        <input type="number" class="form-control" name="claseHazard" min="1" max="9" autocomplete='off'><br>
+                    </div>
                 </div>
                 <div class="grupo-login">
                     <label style=" top: -20px; left: -5px; font-size: 12px; color: #3a7bd5; ">Reefer</label><br>
-                    <span>
-                        <input type="radio" name="reefer" value="si"> si
-                        <input type="radio" name="reefer" value="no" checked> no
-                    </span>
-                    <input type='number' name='temperaturaReefer' placeholder="En caso afirmativo indique temperatura en celcius" autocomplete='off'>
+                    <select class="form-control" id="reefer" autocomplete='off' name="reefer" onChange="mostrar(this.value);">
+                        <option selected value="no reefer">No</option>
+                        <option value="si reefer">Si</option>
+                    </select><br>
+                    <div id="eligioReefer" style="display: none;">
+                        Indique temperatura en celcius
+                        <input type="number" class="form-control" name="temperaturaReefer" autocomplete='off'><br>
+                    </div>
                 </div>
 
                     <h4>Costeo estimado</h4>
