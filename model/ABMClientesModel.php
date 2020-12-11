@@ -10,6 +10,10 @@ class ABMClientesModel{
         return $this->database->query("SELECT * FROM usuario");
     }
 
+    public function getClientes(){
+        return $this->database->query("SELECT * FROM cliente");
+    }
+
     public function insertaDireccionCliente($calleClienteProforma,$numeroClienteProforma,$localidadClienteProforma,$provinciaClienteProforma,$paisClienteProforma){
         $this->database->queryInsert("INSERT INTO direccion (`calle`,`numero`,`localidad`,`provincia`,`pais`)VALUES('$calleClienteProforma','$numeroClienteProforma','$localidadClienteProforma','$provinciaClienteProforma','$paisClienteProforma')");
         $idDireccion= $this->database->query("SELECT idDireccion FROM direccion WHERE `calle` = '$calleClienteProforma'
@@ -27,6 +31,10 @@ class ABMClientesModel{
                                                                         AND `cuitOcuil` = '$clienteCuit'
                                                                         AND `fk_Cliente_Direccion` = '$idDireccion'");
         return $idCliente[0]['idCliente'];   
+    }
+
+    public function deleteCliente($idCliente){
+        $this->database->queryInsert("DELETE FROM cliente WHERE `idCliente` = $idCliente");
     }
 }
 

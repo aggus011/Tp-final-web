@@ -10,8 +10,9 @@ class ABMClientesController
     }
 
     public function execute(){
+        $data["clientes"] = $this->ABMClientesModel->getClientes();
         if ($_SESSION["rolLogeado"] == "supervisor") {
-            echo $this->render->render("view/ABMClientesView.php");
+            echo $this->render->render("view/ABMClientesView.php", $data);
         } else {
             echo "Usuario no es supervisor";
         }
@@ -37,7 +38,13 @@ class ABMClientesController
 
         $idDireccion = $this->ABMClientesModel->insertaDireccionCliente($calleClienteProforma,$numeroClienteProforma,$localidadClienteProforma,$provinciaClienteProforma,$paisClienteProforma);
         $idCliente = $this->ABMClientesModel->insertaCliente($clienteNombre,$clienteApellido,$clienteDenominacion,$clienteCuit,$clienteTelefono,$clienteEmail,$clienteContacto1,$clienteContacto2,$idDireccion);
-        echo $this->render->render("view/ABMClientesView.php");
+        echo $this->execute();
+    }
+
+    public function deleteCliente(){
+        $idCliente = $_POST['idCliente'];
+        $this->ABMClientesModel->deleteCliente($idCliente);
+        $this->execute();
     }
 }
 ?>

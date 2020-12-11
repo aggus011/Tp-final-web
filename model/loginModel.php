@@ -11,8 +11,9 @@ class LoginModel{
     }
 
     public function traerUsuarioLogeado($nombre, $password){
+        $passwordEncripted = md5($password);
         $queryResult = $this->database->query("SELECT * FROM `usuario` 
-        WHERE nombreUsuario = '". $nombre ."' and password='".$password."'");
+        WHERE nombreUsuario = '". $nombre ."' and password='".$passwordEncripted."'");
         if (sizeof($queryResult) == 1){
             return $queryResult;
         }else{

@@ -1,8 +1,141 @@
 {{> headerSuper}}
-<div style='margin-left:80px;margin-right: 15px;'>
-    <br>
-       
-                <form  action='/ABMClientes/InsertaCliente' enctype='multipart/form-data' method='post' class="row">
+<link rel="stylesheet" href="../public/css/tablaUsuarios.css">
+<section style="margin-left: 70px">
+<section>
+<button type='button' class='btn btn-info m-2' data-toggle='modal' data-target='#agregar'>
+Agregar Cliente
+</button>
+  <!--for demo wrap-->
+  <h1>Registro de Clientes</h1>
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th>nombre</th>
+          <th>apellido</th>
+          <th>cuitOcuil</th>
+          <th>denominacion</th>
+          <th>telefono</th>
+          <th>email</th>
+          <th>contacto1</th>
+          <th>contacto2</th>
+          <th>Editar</th>
+          <th>Eliminar</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+{{#clientes}}
+        <tr>
+          <td>{{nombre}}</td>
+          <td>{{apellido}} </td>
+          <td>{{cuitOcuil}}</td>
+          <td>{{denominacion}}</td>
+          <td>{{telefono}}</td>
+          <td>{{email}}</td>
+          <td>{{contacto1}}</td>
+          <td>{{contacto2}}</td>
+            <td>
+                <button type='button' class='btn btn-info m-2' data-toggle='modal' data-target='#modificar{{nombreCliente}}'>
+                <i class="fas fa-user-edit"></i>
+                </button>
+                <!--boton modificar -->
+                <div class='modal fade' id='modificar{{nombreCliente}}'>
+                    <div class='modal-dialog'>
+                        <div class='modal-content'>
+                            <!-- Modal Header -->
+                            <div class='modal-header'>
+                                <h4 class='modal-title'>Modificar Cliente</h4>
+                                <button type='button' class='close' data-dismiss='modal'>&times;</button>
+                            </div>
+                            <!-- Modal body -->
+                            <div class='modal-body'>
+                                <h5>Modificando a {{nombreCliente}}</h5>
+                                <form  action='/ABMUsuarios/modificarRol' enctype='multipart/form-data' method='post'>
+                                    <input type="hidden" name="nick" value="{{nombreCliente}}">
+                                    <label>Modificar rol</label>
+                                    <select class='form-control  mt-2' name="rol" required>
+                                        <option value=''>Elige rol</option>
+                                        <option>admin</option>
+                                        <option>chofer</option>
+                                        <option>supervisor</option>
+                                        <option value="encargadoTaller">encargado</option>
+                                        <option>sin rol</option>
+                                    </select>
+                                    <input class='btn btn-info ml-1 text-center mt-2' type='submit' value='Modificar rol'>
+                                </form><br>
+                                <form  action='/ABMUsuarios/modificarEstado' enctype='multipart/form-data' method='post'>
+                                    <input type="hidden" name="nick" value="{{nombreCliente}}">
+                                    <label>Modificar estado</label>
+                                    <select class='form-control  mt-2' name="estado" required>
+                                        <option value=''>Elige estado</option>
+                                        <option>Activo</option>
+                                        <option>Inactivo</option>
+                                    </select>
+                                    <input class='btn btn-info ml-1 text-center mt-2' type='submit' value='Modificar estado'>
+                                </form>
+                            </div>
+                            <!-- Modal footer -->
+                            <div class='modal-footer'>
+                                <button type='button' class='btn btn-danger' data-dismiss='modal'>Cerrar</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div></td>
+                <td>
+                <button type='button' class='btn btn-info m-2' data-toggle='modal' data-target='#borrar{{idCliente}}'>
+                <i class="fas fa-user-slash"></i>
+                </button>
+                <!--boton borrar -->
+                <div class='modal fade' id='borrar{{idCliente}}'>
+                    <div class='modal-dialog'>
+                        <div class='modal-content'>
+                            <!-- Modal Header -->
+                            <div class='modal-header'>
+                                <h4 class='modal-title'>Eliminar Cliente</h4>
+                                <button type='button' class='close' data-dismiss='modal'>&times;</button>
+                            </div>
+                            <!-- Modal body -->
+                            <div class='modal-body'>
+                                <h5>Esta seguro que quiere eliminar a {{nombre}} ?</h5>
+                                <form  action='/ABMClientes/deleteCliente' enctype='multipart/form-data' method='post'>
+                                    <input type="hidden" name="idCliente" value="{{idCliente}}">
+                                    <input class='btn btn-info ml-5 text-center mt-2' type='submit' value='Eliminar'>
+                                </form><br>
+                            </div>
+                            <!-- Modal footer -->
+                            <div class='modal-footer'>
+                                <button type='button' class='btn btn-danger' data-dismiss='modal'>Cerrar</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div></td>
+        </tr>
+{{/clientes}}
+      </tbody>
+    </table>
+  </div>
+</section>
+<br>
+
+<!--boton modificar -->
+<div class='modal fade' id='agregar'>
+                    <div class='modal-dialog'>
+                        <div class='modal-content'>
+                            <!-- Modal Header -->
+                            <div class='modal-header'>
+                                <h4 class='modal-title'>Agregar Cliente</h4>
+                                <button type='button' class='close' data-dismiss='modal'>&times;</button>
+                            </div>
+                            <!-- Modal body -->
+                            <div class='modal-body'>
+                                
+                                <form  action='/ABMClientes/InsertaCliente' enctype='multipart/form-data' method='post' class="row ml-5">
                 <div class="col-5">
                 <h4>Datos cliente</h4>
                     <div class="grupo-login" >
@@ -89,5 +222,19 @@
                     </div>
                     <input type='submit' class="input-submit" id="inputCliente" value='Enviar' class="ml-5">
                 <form>
+                            </div>
+                            <!-- Modal footer -->
+                            <div class='modal-footer'>
+                                <button type='button' class='btn btn-danger' data-dismiss='modal'>Cerrar</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+<div style='margin-left:80px;margin-right: 15px;'>
+    <br>
+       
+               
                     
 <div>
