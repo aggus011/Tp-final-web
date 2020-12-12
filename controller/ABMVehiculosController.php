@@ -10,7 +10,7 @@ class ABMVehiculosController
     }
 
     public function execute(){
-        $data["arrastrado"] = $this->ABMVehiculosModel->traerArrastrado();
+        $data["arrastrados"] = $this->ABMVehiculosModel->traerArrastrado();
         if ($_SESSION["rolLogeado"] == "supervisor") {
             echo $this->render->render("view/ABMVehiculosView.php", $data);
         } else {
