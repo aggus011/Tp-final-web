@@ -10,6 +10,8 @@ class ABMClientesModel{
         return $this->database->query("SELECT * FROM usuario");
     }
 
+    
+
     public function getClientes(){
         return $this->database->query("SELECT * FROM cliente");
     }

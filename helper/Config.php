@@ -18,6 +18,7 @@ include_once("model/HomeTallerModel.php");
 include_once("model/CargaProformaSuperModel.php");
 include_once("model/CargaProformaChoferModel.php");
 include_once("model/ActualizarProformaModel.php");
+include_once("model/EditUsuarioModel.php");
 
 include_once("controller/LoginController.php");
 include_once("controller/RegisterController.php");
@@ -34,6 +35,8 @@ include_once("controller/HomeTallerController.php");
 include_once("controller/CargaProformaSuperController.php");
 include_once("controller/CargaProformaChoferController.php");
 include_once("controller/ActualizarProformaController.php");
+include_once("controller/CargaProformaChoferController.php");
+include_once("controller/EditUsuarioController.php");
 
 include_once('vendor/mustache/mustache/src/Mustache/Autoloader.php');
 include_once("Router.php");
@@ -204,5 +207,15 @@ class Configuration{
     public function getABMVehiculosModel(){
         $database = $this->getDatabase();
         return new ABMVehiculosModel($database);
+    }
+
+    public function getEditUsuarioController(){
+        $EditUsuarioModel = $this->getEditUsuarioModel();
+        return new EditUsuarioController($EditUsuarioModel, $this->getRender());
+    }
+
+    public function getEditUsuarioModel(){
+        $database = $this->getDatabase();
+        return new EditUsuarioModel($database);
     }
 }

@@ -264,9 +264,3 @@ Agregar Cliente
                     </div>
                 </div>
 
-<div style='margin-left:80px;margin-right: 15px;'>
-    <br>
-       
-               
-                    
-<div>
