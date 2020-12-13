@@ -36,6 +36,20 @@ class ABMClientesModel{
     public function deleteCliente($idCliente){
         $this->database->queryInsert("DELETE FROM cliente WHERE `idCliente` = $idCliente");
     }
+
+    public function updateCliente($idCliente,$clienteNombre,$clienteApellido,$clienteDenominacion,$clienteCuit,$clienteTelefono,$clienteEmail,$clienteContacto1,$clienteContacto2){
+        $this->database->queryInsert("UPDATE cliente SET
+        `nombre` = '$clienteNombre',
+        `apellido` = '$clienteApellido',
+        `cuitOcuil` = '$clienteCuit',
+        `denominacion` = '$clienteDenominacion',
+        `telefono` = '$clienteTelefono',
+        `email` = '$clienteEmail',
+        `contacto1` = '$clienteContacto1',
+        `contacto2` = '$clienteContacto2'
+        WHERE `idCliente` = $idCliente;
+        ");
+    }
 }
 
 ?>
