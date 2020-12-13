@@ -22,6 +22,7 @@ class LoginController
             return $this->renderErrorMenssage('El email y password son obligatorios');
         else{
             $usuario =$this->loginModel->traerUsuarioLogeado($nombre, $password);
+            $_SESSION['idUsuario'] = $usuario[0]['idUsuario'];
                 if($usuario){
                     $rol= $this->loginModel->traerRolPorNumeroFk($usuario[0]['fk_Usuario_Role']);
                     // aca estaria la separacion por rol una vez logeado pregunta el rol y lo dirige al .php de ese rol

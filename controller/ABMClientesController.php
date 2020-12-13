@@ -11,7 +11,7 @@ class ABMClientesController
 
     public function execute(){
         $data["clientes"] = $this->ABMClientesModel->getClientes();
-        if ($_SESSION["rolLogeado"] == "supervisor") {
+        if ($_SESSION["rolLogeado"] == "supervisor" || $_SESSION["rolLogeado"] == "admin") {
             echo $this->render->render("view/ABMClientesView.php", $data);
         } else {
             echo "Usuario no es supervisor";
@@ -38,12 +38,27 @@ class ABMClientesController
 
         $idDireccion = $this->ABMClientesModel->insertaDireccionCliente($calleClienteProforma,$numeroClienteProforma,$localidadClienteProforma,$provinciaClienteProforma,$paisClienteProforma);
         $idCliente = $this->ABMClientesModel->insertaCliente($clienteNombre,$clienteApellido,$clienteDenominacion,$clienteCuit,$clienteTelefono,$clienteEmail,$clienteContacto1,$clienteContacto2,$idDireccion);
-        echo $this->execute();
+        $this->execute();
     }
 
     public function deleteCliente(){
         $idCliente = $_POST['idCliente'];
         $this->ABMClientesModel->deleteCliente($idCliente);
+        $this->execute();
+    }
+
+    public function updateCliente(){
+        //datos clientes
+        $idCliente = $_POST["idCliente"];
+        $clienteNombre = $_POST["nombreClienteProforma"];
+        $clienteApellido = $_POST["apellidoClienteProforma"];
+        $clienteDenominacion = $_POST["denominacionProforma"];
+        $clienteCuit = $_POST["CuitProforma"];
+        $clienteTelefono = $_POST["TelefonoProforma"];
+        $clienteEmail = $_POST["EmailProforma"];
+        $clienteContacto1 = $_POST["contacto1Proforma"];
+        $clienteContacto2 = $_POST["contacto2Proforma"];
+        $this->ABMClientesModel->updateCliente($idCliente,$clienteNombre,$clienteApellido,$clienteDenominacion,$clienteCuit,$clienteTelefono,$clienteEmail,$clienteContacto1,$clienteContacto2);
         $this->execute();
     }
 }
