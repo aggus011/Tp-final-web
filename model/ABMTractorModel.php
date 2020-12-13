@@ -19,4 +19,9 @@ class ABMTractorModel{
         $this->database->queryInsert("UPDATE `grupo02`.`tractor` SET `motor` = '$motorTractor' WHERE `patenteTractor` = '$patenteTractor';");
         $this->database->queryInsert("UPDATE `grupo02`.`tractor` SET `chasis` = '$chasisTractor' WHERE `patenteTractor` = '$patenteTractor';");
     }
+
+    public function agregar($patenteTractor, $marcaTractor, $modeloTractor, $motorTractor, $chasisTractor){
+        $this->database->queryInsert("INSERT INTO `grupo02`.`tractor` (`patenteTractor`, `marca`, `modelo`, `motor`, `chasis`) 
+                                        VALUES ('$patenteTractor', '$marcaTractor', '$modeloTractor', '$motorTractor', '$chasisTractor');");
+    }
 }

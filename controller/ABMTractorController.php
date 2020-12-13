@@ -38,5 +38,15 @@ class ABMTractorController
             $this->ABMTractorModel->modificar($patenteTractor, $marcaTractor, $modeloTractor, $motorTractor, $chasisTractor);
             header("Location:/ABMTractor");
     }
+
+    public function agregar(){
+        $patenteTractor = isset($_POST['patenteTractor']) ? $_POST['patenteTractor'] : "";
+        $marcaTractor = isset($_POST['marca']) ? $_POST['marca'] : "";
+        $modeloTractor = isset($_POST['modelo']) ? $_POST['modelo'] : "";
+        $motorTractor = isset($_POST['motor']) ? $_POST['motor'] : "";
+        $chasisTractor = isset($_POST['chasis']) ? $_POST['chasis'] : "";
+        $this->ABMTractorModel->agregar($patenteTractor, $marcaTractor, $modeloTractor, $motorTractor, $chasisTractor);
+        header("Location:/ABMTractor");
+    }
 }
 ?>

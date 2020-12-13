@@ -36,5 +36,13 @@ class ABMArrastradoController
             $this->ABMArrastradoModel->modificar($patenteArrastrado2, $tipoArrastrado, $chasisArrastrado);
             header("Location:/ABMArrastrado");
     }
+
+    public function agregar(){
+        $patenteArrastrado = isset($_POST['patenteArrastrado']) ? $_POST['patenteArrastrado'] : "";
+        $tipoArrastrado = isset($_POST['tipo']) ? $_POST['tipo'] : "";
+        $chasisArrastrado = isset($_POST['chasis']) ? $_POST['chasis'] : "";
+        $this->ABMArrastradoModel->agregar($patenteArrastrado, $tipoArrastrado, $chasisTractor);
+        header("Location:/ABMArrastrado");
+    }
 }
 ?>

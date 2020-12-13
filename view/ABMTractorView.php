@@ -6,6 +6,42 @@
 <section>
   <!--for demo wrap-->
   <h2>Tractores</h2>
+  <button type='button' class='btn btn-info m-2' data-toggle='modal' data-target='#agregar{{patenteTractor}}'>
+                Agregar
+                </button>
+                <!--boton modificar -->
+                <div class='modal fade' id='agregar{{patenteTractor}}'>
+                    <div class='modal-dialog'>
+                        <div class='modal-content'>
+                            <!-- Modal Header -->
+                            <div class='modal-header'>
+                                <h4 class='modal-title'>Agregar Tractor</h4>
+                                <button type='button' class='close' data-dismiss='modal'>&times;</button>
+                            </div>
+                            <!-- Modal body -->
+                            <div class='modal-body'>
+                                <form  action='/ABMTractor/agregar' enctype='multipart/form-data' method='post'>
+                                    <label>Patente</label>
+                                    <input type="text" name="patenteTractor"><br>
+                                    <label>Marca</label>
+                                    <input type="text" name ="marca"><br>
+                                    <label>Modelo</label>
+                                    <input type="text" name ="modelo"><br>
+                                    <label>Motor</label>
+                                    <input type="text" name ="motor"><br>
+                                    <label>Chasis</label>
+                                    <input type="text" name ="chasis"><br>
+                                    <input class='btn btn-info ml-1 text-center mt-2' type='submit' value='Agregar'>
+                                </form>
+                            </div>
+                            <!-- Modal footer -->
+                            <div class='modal-footer'>
+                                <button type='button' class='btn btn-danger' data-dismiss='modal'>Cerrar</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
   <div class="tbl-header">
     <table cellpadding="0" cellspacing="0" border="0">
       <thead>

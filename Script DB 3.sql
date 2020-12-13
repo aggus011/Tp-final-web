@@ -85,7 +85,7 @@ CREATE TABLE IF NOT EXISTS `grupo02`.`Usuario` (
 ENGINE = InnoDB;
 
 CREATE TABLE IF NOT EXISTS `grupo02`.`tractor` (
-  `idTractor` INT,
+  `idTractor` INT AUTO_INCREMENT,
   `patenteTractor` VARCHAR(50),
   `marca` VARCHAR(50),
   `modelo` VARCHAR(50),
@@ -95,7 +95,7 @@ CREATE TABLE IF NOT EXISTS `grupo02`.`tractor` (
 ENGINE = InnoDB;
 
 CREATE TABLE IF NOT EXISTS `grupo02`.`arrastrado` (
-  `idArrastrado` INT,
+  `idArrastrado` INT AUTO_INCREMENT,
   `patenteArrastrado` VARCHAR(50) NOT NULL,
   `tipo` VARCHAR(50),
   `chasis` INT,

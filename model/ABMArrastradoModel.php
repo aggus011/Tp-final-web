@@ -18,4 +18,9 @@ class ABMArrastradoModel{
         $this->database->queryInsert("UPDATE `grupo02`.`arrastrado` SET `tipo` = '$tipoArrastrado' WHERE `patenteArrastrado` = '$patenteArrastrado2';");
         $this->database->queryInsert("UPDATE `grupo02`.`arrastrado` SET `chasis` = '$chasisArrastrado' WHERE `patenteArrastrado` = '$patenteArrastrado2';");
     }
+
+    public function agregar($patenteArrastrado, $tipoArrastrado, $chasisArrastrado){
+        $this->database->queryInsert("INSERT INTO `grupo02`.`arrastrado` (`patenteArrastrado`, `tipo`, `chasis`) 
+                                        VALUES ('$patenteArrastrado', '$tipoArrastrado', '$chasisArrastrado');");
+    }
 }
