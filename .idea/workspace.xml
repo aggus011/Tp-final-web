@@ -22,13 +22,7 @@
     <list default="true" id="5b30e037-85d7-4d6a-9d7f-267880532341" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/HomeSuperController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/HomeSuperController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/HomeSuperModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/HomeSuperModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pdf/crear.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/pdf/crear.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/pdf/temp/test.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/pdf/temp/test.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/mostrarUbicacionView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/mostrarUbicacionView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/partial/headerSuper.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/view/partial/headerSuper.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/ubicacionSuperView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/ubicacionSuperView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/CargaProformaSuperView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/CargaProformaSuperView.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,6 +106,7 @@
       <workItem from="1607382517092" duration="4225000" />
       <workItem from="1607456435562" duration="10351000" />
       <workItem from="1607605863068" duration="7078000" />
+      <workItem from="1607949366879" duration="1372000" />
     </task>
     <task id="LOCAL-00001" summary="cambie los directorios">
       <created>1604443927197</created>

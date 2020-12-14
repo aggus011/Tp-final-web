@@ -11,9 +11,13 @@ class ABMClientesController
 
     public function execute(){
         $data["clientes"] = $this->ABMClientesModel->getClientes();
-        if ($_SESSION["rolLogeado"] == "supervisor" || $_SESSION["rolLogeado"] == "admin") {
+        if ($_SESSION["rolLogeado"] == "supervisor") {
             echo $this->render->render("view/ABMClientesView.php", $data);
-        } else {
+        }
+        if ($_SESSION["rolLogeado"] == "admin"){
+            echo $this->render->render("view/ABMClientesAdminView.php", $data);
+        }
+        else {
             echo "Usuario no es supervisor";
         }
 
