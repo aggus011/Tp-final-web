@@ -85,7 +85,7 @@ CREATE TABLE IF NOT EXISTS `grupo02`.`Usuario` (
 ENGINE = InnoDB;
 
 CREATE TABLE IF NOT EXISTS `grupo02`.`tractor` (
-  `idTractor` INT,
+  `idTractor` INT AUTO_INCREMENT,
   `patenteTractor` VARCHAR(50),
   `marca` VARCHAR(50),
   `modelo` VARCHAR(50),
@@ -95,7 +95,7 @@ CREATE TABLE IF NOT EXISTS `grupo02`.`tractor` (
 ENGINE = InnoDB;
 
 CREATE TABLE IF NOT EXISTS `grupo02`.`arrastrado` (
-  `idArrastrado` INT,
+  `idArrastrado` INT AUTO_INCREMENT,
   `patenteArrastrado` VARCHAR(50) NOT NULL,
   `tipo` VARCHAR(50),
   `chasis` INT,
@@ -173,26 +173,15 @@ ENGINE = InnoDB;
 
 CREATE TABLE IF NOT EXISTS `grupo02`.`Vehiculo` (
   `idVehiculo` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `modelo` VARCHAR(45) NULL,
-  `patente` VARCHAR(10) NULL,
-  `numeroDeChasis` VARCHAR(45) NULL,
-  `numeroDeMotor` VARCHAR(45) NULL,
-  `anioDeFabricacion` DATETIME NULL,
-  `kilometraje` INT NULL,
-  `posicionActual` VARCHAR(45) NULL,
-  `fk_Vehiculo_EstadoDelVehiculo` INT UNSIGNED NOT NULL,
-  `fk_Vehiculo_Marca` TINYINT UNSIGNED NOT NULL,
-  `fk_Vehiculo_Usuario` INT UNSIGNED NOT NULL,
+  `fk_Vehiculo_Arrastrado` INT NULL,
+  `fk_Vehiculo_Tractor` INT NULL,
   PRIMARY KEY (`idVehiculo`),
-  CONSTRAINT `fk_Vehiculo_EstadoDelVehiculo`
-    FOREIGN KEY (`fk_Vehiculo_EstadoDelVehiculo`)
-    REFERENCES `grupo02`.`EstadoDelVehiculo` (`idEstadoDelVehiculo`),
-  CONSTRAINT `fk_Vehiculo_Marca`
-    FOREIGN KEY (`fk_Vehiculo_Marca`)
-    REFERENCES `grupo02`.`Marca` (`idMarca`),
-  CONSTRAINT `fk_Vehiculo_Usuario`
-    FOREIGN KEY (`fk_Vehiculo_Usuario`)
-    REFERENCES `grupo02`.`Usuario` (`idUsuario`))
+  CONSTRAINT `fk_Vehiculo_Arrastrado`
+    FOREIGN KEY (`fk_Vehiculo_Arrastrado`)
+    REFERENCES `grupo02`.`arrastrado` (`idArrastrado`),
+  CONSTRAINT `fk_Vehiculo_Tractor`
+    FOREIGN KEY (`fk_Vehiculo_Tractor`)
+    REFERENCES `grupo02`.`tractor` (`idTractor`))
 ENGINE = InnoDB;
 
 CREATE TABLE IF NOT EXISTS `grupo02`.`Licencia` (
@@ -661,4 +650,230 @@ VALUES
 'AD105ZP',
 'CarCarriet',
 '733355'
+);
+INSERT INTO `grupo02`.`tractor`
+(
+  `idTractor`,
+  `patenteTractor`,
+  `marca`,
+  `modelo`,
+  `motor`,
+  `chasis`
+)
+VALUES
+(
+  1,
+  'AA123CD',
+  'IVECO',
+  'Cursor',
+  '53879558',
+  'L53879558'
+),
+(
+  2,
+  'AA124DC',
+  'IVECO',
+  'Cursor',
+  '69904367',
+  'R699004367'
+),
+(
+  3,
+  'AD200XS',
+  'IVECO',
+  'Cursor',
+  '57193968',
+  'R57193968'
+),
+(
+  4,
+  'AA211ZX',
+  'IVECO',
+  'Cursor',
+  '82836641',
+  'N82836641'
+),
+(
+  5,
+  'AC452WE',
+  'IVECO',
+  'Cursor',
+  '28204636',
+  'R28204636'
+),
+(
+  6,
+  'AA233SS',
+  'IVECO',
+  'Cursor',
+  '26139668',
+  'K266139668'
+),
+(
+  7,
+  'AB900QW',
+  'IVECO',
+  'Cursor',
+  '44301415',
+  'F44301415'
+),
+(
+  8,
+  'AC342WW',
+  'IVECO',
+  'Cursor',
+  '44260023',
+  'D44260023'
+),
+(
+  9,
+  'AA150QW',
+  'SCANIA',
+  'G310',
+  '82039512',
+  'I82039512'
+),
+(
+  10,
+  'AB198QZ',
+  'SCANIA',
+  'G310',
+  '18389741',
+  'V18389741'
+),
+(
+  11,
+  'AC246QD',
+  'SCANIA',
+  'G310',
+  '62500684',
+  'O62500684'
+),
+(
+  12,
+  'AD294QW',
+  'SCANIA',
+  'G310',
+  '27510702',
+  'T27510702'
+),
+(
+  13,
+  'AA342QZ',
+  'SCANIA',
+  'G310',
+  '72582865',
+  'C72582865'
+),
+(
+  14,
+  'AB390QD',
+  'SCANIA',
+  'G310',
+  '32041290',
+  'Z32041290'
+),
+(
+  15,
+  'AC438QW',
+  'SCANIA',
+  'G310',
+  '54712451',
+  'W54712451'
+),
+(
+  16,
+  'AD486QZ',
+  'SCANIA',
+  'G310',
+  '56284263',
+  'L56284263'
+),
+(
+  17,
+  'AA534QD',
+  'SCANIA',
+  'G310',
+  '21357689',
+  'A21357689'
+),
+(
+  18,
+  'AB582QW',
+  'M.BENZ',
+  'Actros1846',
+  '17800122',
+  'V17800122'
+),
+(
+  19,
+  'AC630QZ',
+  'M.BENZ',
+  'Actros1846',
+  '88648319',
+  'G88648319'
+),
+(
+  20,
+  'AD678QD',
+  'M.BENZ',
+  'Actros1846',
+  '23849041',
+  'C23849041'
+),
+(
+  21,
+  'AA726QW',
+  'M.BENZ',
+  'Actros1846',
+  '54650513',
+  'C54650513'
+),
+(
+  22,
+  'AB774QZ',
+  'M.BENZ',
+  'Actros1846',
+  '46753468',
+  'J46753468'
+),
+(
+  23,
+  'AC822QD',
+  'M.BENZ',
+  'Actros1846',
+  '60916748',
+  'J60916748'
+),
+(
+  24,
+  'AD870QW',
+  'M.BENZ',
+  'Actros1846',
+  '30207594',
+  'M30207594'
+),
+(
+  25,
+  'AA918QZ',
+  'M.BENZ',
+  'Actros1846',
+  '31256765',
+  'C31256765'
+),
+(
+  26,
+  'AB966QD',
+  'M.BENZ',
+  'Actros1846',
+  '32632699',
+  'B32632699'
+),
+(
+  27,
+  'AC989QW',
+  'M.BENZ',
+  'Actros1846',
+  '64092078',
+  'F64092078'
 );

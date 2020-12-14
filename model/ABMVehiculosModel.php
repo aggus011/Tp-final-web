@@ -6,6 +6,8 @@ class ABMVehiculosModel{
         $this->database = $database;
     }
     public function traerArrastrado(){
-        return $this->database->query("SELECT * FROM `grupo02`.`arrastrado`;");
+        $query1 = $this->database->query("SELECT * FROM `grupo02`.`arrastrado`;");
+        $query2 = $this->database->query("SELECT * FROM `grupo02`.`tractor`;");
+        return $query1;
     }
 }
