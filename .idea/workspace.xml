@@ -22,9 +22,13 @@
     <list default="true" id="5b30e037-85d7-4d6a-9d7f-267880532341" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/HomeSuperController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/HomeSuperController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/HomeSuperModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/HomeSuperModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/pdf/crear.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/pdf/crear.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/pdf/temp/test.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/pdf/temp/test.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/CargaProformaView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/CargaProformaView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/mostrarUbicacionView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/mostrarUbicacionView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/partial/headerSuper.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/view/partial/headerSuper.mustache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/ubicacionSuperView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/ubicacionSuperView.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,10 +176,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="121" y="134" width="1637" height="663" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607027622244" />
-    <state x="166" y="171" width="1562" height="722" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog" timestamp="1607467887422">
+    <state x="166" y="171" width="1562" height="722" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog" timestamp="1607924344685">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="166" y="171" width="1562" height="722" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607467887422" />
+    <state x="166" y="171" width="1562" height="722" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607924344685" />
     <state x="549" y="80" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1607468574706">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -188,10 +192,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="678" y="231" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607027796727" />
-    <state x="616" y="282" width="672" height="160" key="search.everywhere.popup" timestamp="1607624539288">
+    <state x="616" y="282" width="672" height="160" key="search.everywhere.popup" timestamp="1607920018857">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="416" y="0" width="840" height="1034" key="search.everywhere.popup/0.0.1676.902@0.0.1676.902" timestamp="1604630765549" />
-    <state x="616" y="282" width="672" height="160" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607624539288" />
+    <state x="616" y="282" width="672" height="160" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607920018857" />
   </component>
 </project>
