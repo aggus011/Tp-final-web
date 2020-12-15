@@ -12,6 +12,8 @@ include_once("model/CargaProformaModel.php");
 include_once("model/ABMUsuariosSuperModel.php");
 include_once("model/ABMVehiculosModel.php");
 include_once("model/ABMClientesModel.php");
+include_once("model/ABMArrastradoModel.php");
+include_once("model/ABMTractorModel.php");
 include_once("model/HomeChoferModel.php");
 include_once("model/HomeSuperModel.php");
 include_once("model/HomeTallerModel.php");
@@ -32,6 +34,8 @@ include_once("controller/ABMUsuariosSuperController.php");
 include_once("controller/ActualizarProformaController.php");
 include_once("controller/ABMClientesController.php");
 include_once("controller/ABMVehiculosController.php");
+include_once("controller/ABMArrastradoController.php");
+include_once("controller/ABMTractorController.php");
 include_once("controller/HomeChoferController.php");
 include_once("controller/HomeSuperController.php");
 include_once("controller/HomeTallerController.php");
@@ -205,6 +209,7 @@ class Configuration{
         $database = $this->getDatabase();
         return new HomeTallerModel($database);
     }
+
     public function getABMVehiculosController(){
         $ABMVehiculosModel = $this->getABMVehiculosModel();
         return new ABMVehiculosController($ABMVehiculosModel, $this->getRender());
@@ -214,7 +219,27 @@ class Configuration{
         $database = $this->getDatabase();
         return new ABMVehiculosModel($database);
     }
+    
+    public function getABMArrastradoController(){
+        $ABMArrastradoModel = $this->getABMArrastradoModel();
+        return new ABMArrastradoController($ABMArrastradoModel, $this->getRender());
+    }
 
+    public function getABMArrastradoModel(){
+        $database = $this->getDatabase();
+        return new ABMArrastradoModel($database);
+    }
+
+    public function getABMTractorController(){
+        $ABMTractorModel = $this->getABMtractorModel();
+        return new ABMTractorController($ABMTractorModel, $this->getRender());
+    }
+
+    public function getABMTractorModel(){
+        $database = $this->getDatabase();
+        return new ABMTractorModel($database);
+    }
+    
     public function getEditUsuarioController(){
         $EditUsuarioModel = $this->getEditUsuarioModel();
         return new EditUsuarioController($EditUsuarioModel, $this->getRender());
