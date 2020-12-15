@@ -212,6 +212,19 @@ CREATE TABLE IF NOT EXISTS `grupo02`.`Mantenimiento` (
     FOREIGN KEY (`fk_Mantenimiento_Usuario`)
     REFERENCES `grupo02`.`Usuario` (`idUsuario`))
 ENGINE = InnoDB;
+CREATE TABLE IF NOT EXISTS `grupo02`.`Mantenimientotaller` (
+  `idMantenimiento` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `fechaIngreso` DATETIME NULL,
+  `fechaEgreso` DATETIME NULL,
+  `costoMantenimiento` DECIMAL(10,2) NULL,
+  `estadoMantenimiento` VARCHAR(25) NULL,
+  `repuestosCambiados` VARCHAR(25) NULL,
+  `descripcion` VARCHAR(45) NULL,
+  `patenteMantenimiento` VARCHAR(50) NULL,
+  
+  PRIMARY KEY (`idMantenimiento`) 
+  )
+ENGINE = InnoDB;
 
 CREATE TABLE IF NOT EXISTS `grupo02`.`Viaje` (
   `idViajeReal` INT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -299,6 +312,30 @@ VALUES
 '76d80224611fc919a5d54f0ff9fba446',
 1,
 2,
+1);
+INSERT INTO `grupo02`.`usuario`
+(
+`nombre`,
+`apellido`,
+`documento`,
+`telefono`,
+`email`,
+`nombreUsuario`,
+`password`,
+`estado`,
+`fk_Usuario_Role`,
+`fk_Usuario_Direccion`)
+VALUES
+(
+'taller',
+'taller',
+123,
+123,
+'taller',
+'taller',
+'76d80224611fc919a5d54f0ff9fba446',
+1,
+4,
 1);
 
 INSERT INTO `grupo02`.`usuario`

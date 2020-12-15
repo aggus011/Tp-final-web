@@ -20,9 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b30e037-85d7-4d6a-9d7f-267880532341" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/view/mantenimientoView.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/serviceView.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Script DB 3.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Script DB 3.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/CargaProformaSuperView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/CargaProformaSuperView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/HomeTallerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/HomeTallerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/HomeTallerModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/HomeTallerModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/partial/headerTaller.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/view/partial/headerTaller.mustache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +111,7 @@
       <workItem from="1607382517092" duration="4225000" />
       <workItem from="1607456435562" duration="10351000" />
       <workItem from="1607605863068" duration="7078000" />
-      <workItem from="1607949366879" duration="1372000" />
+      <workItem from="1607949366879" duration="18144000" />
     </task>
     <task id="LOCAL-00001" summary="cambie los directorios">
       <created>1604443927197</created>
@@ -156,11 +161,11 @@
     </state>
     <state x="787" y="243" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606944865161" />
     <state x="787" y="243" key="NewPhpClassDialog/1920.34.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1604324658830" />
-    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1607624423119">
+    <state x="784" y="376" key="NewPhpFileDialog" timestamp="1608011452180">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="693" y="384" key="NewPhpFileDialog/0.0.1676.902@0.0.1676.902" timestamp="1604543272378" />
-    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607624423119" />
+    <state x="784" y="376" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608011452180" />
     <state x="794" y="443" key="NewPhpFileDialog/1920.34.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1604329832822" />
     <state x="262" y="10" key="SettingsEditor" timestamp="1606761135848">
       <screen x="0" y="0" width="1920" height="1040" />
