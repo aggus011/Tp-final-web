@@ -1,12 +1,12 @@
-{{> header}}
+{{> headerChofer}}
 {{#usuario}}
 <link rel="stylesheet" href="../public/css/tablaUsuarios.css">
 <div style="margin-left: 70px">
     <h2>Editar Mis Datos</h2>
     
-    <!-- <button type='button' class='btn btn-info m-2' data-toggle='modal' data-target='#agregar'>
+    <button type='button' class='btn btn-info m-2' data-toggle='modal' data-target='#agregar'>
     Agregar Licencia
-    </button> -->
+    </button>
 <form  action='/EditUsuario/updateUsuario' enctype='multipart/form-data' method='post' class="row ml-5">
         <div class="col-10">
         <input type="text" name='idUsuario' id='idUsuario' value='{{idUsuario}}' hidden>
@@ -87,7 +87,7 @@
     </div>
 </div>
 {{/usuario}}
-<!-- <section style="margin-left: 70px">
+<section style="margin-left: 70px">
 <h1>Registro de Licencias</h1>
   <div class="tbl-header">
     <table cellpadding="0" cellspacing="0" border="0">
@@ -111,13 +111,16 @@
                 <button type='button' class='btn btn-info m-2' data-toggle='modal' data-target='#borrar{{idLicencia}}'>
                 <i class="fas fa-user-slash"></i>
                 </button>
+                <!--boton borrar -->
                 <div class='modal fade' id='borrar{{idLicencia}}'>
                     <div class='modal-dialog'>
                         <div class='modal-content'>
+                            <!-- Modal Header -->
                             <div class='modal-header'>
                                 <h4 class='modal-title'>Eliminar Cliente</h4>
                                 <button type='button' class='close' data-dismiss='modal'>&times;</button>
                             </div>
+                            <!-- Modal body -->
                             <div class='modal-body'>
                                 <h5>Esta seguro que quiere eliminar la licencia?</h5>
                                 <form  action='/EditUsuario/deleteLicencia' enctype='multipart/form-data' method='post'>
@@ -125,6 +128,7 @@
                                     <input class='btn btn-info ml-5 text-center mt-2' type='submit' value='Eliminar'>
                                 </form><br>
                             </div>
+                            <!-- Modal footer -->
                             <div class='modal-footer'>
                                 <button type='button' class='btn btn-danger' data-dismiss='modal'>Cerrar</button>
                             </div>
@@ -138,4 +142,4 @@
       </tbody>
     </table>
   </div>
-</section> -->
+</section>

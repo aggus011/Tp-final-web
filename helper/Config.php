@@ -19,6 +19,9 @@ include_once("model/CargaProformaSuperModel.php");
 include_once("model/CargaProformaChoferModel.php");
 include_once("model/ActualizarProformaModel.php");
 include_once("model/EditUsuarioModel.php");
+include_once("model/EditUsuarioChoferModel.php");
+include_once("model/EditUsuarioSuperModel.php");
+include_once("model/EditUsuarioEncargadoModel.php");
 
 include_once("controller/LoginController.php");
 include_once("controller/RegisterController.php");
@@ -37,6 +40,9 @@ include_once("controller/CargaProformaChoferController.php");
 include_once("controller/ActualizarProformaController.php");
 include_once("controller/CargaProformaChoferController.php");
 include_once("controller/EditUsuarioController.php");
+include_once("controller/EditUsuarioChoferController.php");
+include_once("controller/EditUsuarioSuperController.php");
+include_once("controller/EditUsuarioEncargadoController.php");
 
 include_once('vendor/mustache/mustache/src/Mustache/Autoloader.php');
 include_once("Router.php");
@@ -217,5 +223,35 @@ class Configuration{
     public function getEditUsuarioModel(){
         $database = $this->getDatabase();
         return new EditUsuarioModel($database);
+    }
+
+    public function getEditUsuarioChoferController(){
+        $EditUsuarioChoferModel = $this->getEditUsuarioChoferModel();
+        return new EditUsuarioChoferController($EditUsuarioChoferModel, $this->getRender());
+    }
+
+    public function getEditUsuarioChoferModel(){
+        $database = $this->getDatabase();
+        return new EditUsuarioChoferModel($database);
+    }
+
+    public function getEditUsuarioEncargadoController(){
+        $EditUsuarioEncargadoModel = $this->getEditUsuarioEncargadoModel();
+        return new EditUsuarioEncargadoController($EditUsuarioEncargadoModel, $this->getRender());
+    }
+
+    public function getEditUsuarioEncargadoModel(){
+        $database = $this->getDatabase();
+        return new EditUsuarioEncargadoModel($database);
+    }
+
+    public function getEditUsuarioSuperController(){
+        $EditUsuarioSuperModel = $this->getEditUsuarioSuperModel();
+        return new EditUsuarioSuperController($EditUsuarioSuperModel, $this->getRender());
+    }
+
+    public function getEditUsuarioSuperModel(){
+        $database = $this->getDatabase();
+        return new EditUsuarioSuperModel($database);
     }
 }

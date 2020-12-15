@@ -1,4 +1,4 @@
-{{> header}}
+{{> headerTaller}}
 {{#usuario}}
 <link rel="stylesheet" href="../public/css/tablaUsuarios.css">
 <div style="margin-left: 70px">

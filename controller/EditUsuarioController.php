@@ -12,7 +12,11 @@ class EditUsuarioController
     public function execute()    {
         $data["usuario"] = $this->EditUsuarioModel->traerUsuario($_SESSION['idUsuario']);
         $data["licencias"] = $this->EditUsuarioModel->traerLicencias($_SESSION['idUsuario']);
+        if ($_SESSION["rolLogeado"] == "admin") {
         echo $this->render->render("view/EditUsuarioView.php", $data);
+        }else {
+            echo "Usuario no es admin";
+        }
     }
 
     public function insertaLicencia(){
