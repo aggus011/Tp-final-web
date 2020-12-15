@@ -30,11 +30,11 @@ class HomeSuperController
         if ($_SESSION["rolLogeado"] == "supervisor") {
 
             $ubicacion=$this->homeSuperModel->obtenerUbicacionDeViaje($_POST["idViaje"]);
-            $data["latitud"] = isset($ubicacion[0]["latitud"]) ? $ubicacion[0]["latitud"] : false;
-            $data["longitud"] = isset($ubicacion[0]["longitud"]) ? $ubicacion[0]["longitud"] : false;
+            isset($ubicacion[0]["latitud"]) ? $data["latitud"] = $ubicacion[0]["latitud"] : $data["latitud"] =false;
+            isset($ubicacion[0]["longitud"]) ? $data["longitud"] = $ubicacion[0]["longitud"] : $data["longitud"] =false;
 
             $data["datos"]=$this->homeSuperModel->obtenerDatosDeViaje($_POST["idViaje"]);
-            if ($data["latitud"] || $data["longitud"] == false){
+            if ($data["latitud"] == false || $data["longitud"] == false){
                 $data["error"]="no se encuentran datos de ubicacion";
             }
             echo $this->render->render("view/mostrarUbicacionView.php",$data);

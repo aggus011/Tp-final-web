@@ -1,14 +1,14 @@
 {{> headerSuper}}
 <section  style="margin-left: 80px;">
     <div class="row">
-        <div class="col-lg-6" >
+        <div class="col-xl-6" >
             <h1>Ubicacion de viaje</h1><br><br>
             <h3>{{error}}</h3><br>
 
-            <iframe src="https://maps.google.com/?q={{latitud}},{{longitud}}&z=15&t=m&output=embed" width="400" height="300" frameborder="0" style="border:0" tabindex="1" allowfullscreen></iframe>
+            <iframe src="https://maps.google.com/?q={{latitud}},{{longitud}}&z=15&t=m&output=embed" width="600" height="400" frameborder="0" style="border:0" tabindex="1" allowfullscreen></iframe>
 
         </div>
-        <div class="col-lg-6" >
+        <div class="col-xl-6" >
             <h1>datos del viaje</h1>
             <br>
             {{#datos}}
