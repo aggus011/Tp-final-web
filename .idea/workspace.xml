@@ -20,14 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b30e037-85d7-4d6a-9d7f-267880532341" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/view/mantenimientoView.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/serviceView.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Script DB 3.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Script DB 3.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/HomeTallerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/HomeTallerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/HomeTallerModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/HomeTallerModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/partial/headerTaller.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/view/partial/headerTaller.mustache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/LoginController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +106,8 @@
       <workItem from="1607382517092" duration="4225000" />
       <workItem from="1607456435562" duration="10351000" />
       <workItem from="1607605863068" duration="7078000" />
-      <workItem from="1607949366879" duration="18144000" />
+      <workItem from="1607949366879" duration="18561000" />
+      <workItem from="1608062384938" duration="618000" />
     </task>
     <task id="LOCAL-00001" summary="cambie los directorios">
       <created>1604443927197</created>
